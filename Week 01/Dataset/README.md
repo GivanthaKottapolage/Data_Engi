@@ -268,10 +268,10 @@ SELECT 'ad_clicks',                     COUNT(*)        FROM social.ad_clicks
 ORDER BY table_name;
 ```
 
-Expected results:
+Row counts in each CSV file:
 
-| Table | Expected rows |
-|-------|--------------|
+| Table | Rows in CSV |
+|-------|-------------|
 | ad_clicks | 164,800 |
 | advertisements | 6,000 |
 | comments | 350,000 |
@@ -280,7 +280,11 @@ Expected results:
 | shares | 85,300 |
 | users | 125,600 |
 
-If the counts match, you are ready to start profiling and cleaning.
+**Your loaded counts may be lower than these — and that's expected.**
+
+- If you imported every column as **`TEXT`** (the `social` schema in Step 2), the counts should match exactly.
+- If you used the **typed schema** (e.g. `create_tables.sql`, which builds the `raw` tables with `TIMESTAMP` / `NUMERIC` / `NOT NULL` / `UNIQUE` / foreign keys), some rows are **rejected during import** because the data is intentionally dirty — bad dates, duplicate keys, missing required values. DataGrip reports *"N rows imported, M errors"* and saves the rejected rows to a `.txt` file (e.g. `users.txt`).
+- **Those rejected rows are the dirty data.** Note how many were rejected per table and investigate them during profiling — don't try to force the totals to match.
 
 ---
 
