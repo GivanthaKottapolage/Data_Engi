@@ -1,0 +1,301 @@
+merchant_id,merchant_name,category
+1,Damro Ampara,Super Market
+2,Abans Anuradhapura,Furniture
+3,Fashion Bug Monaragala,NULL
+4,Burger King Kalutara,Pharmacy
+5,Glomark Nuwara Eliya,Electronics
+6,Cool Planet Kandy,Pharmacy
+7,Nolimit Ampara,SUPERMARKET
+8,Fashion Bug Matara,Restaurant
+9,Odel Hambantota,Telecom
+10,Hemas Kandy,Pharmacy
+11,Dominos Moratuwa,Groceries
+12,Keells Super Vavuniya,Apparel
+13,Glomark Puttalam,Supermarket
+14,KFC Hambantota,Restaurant
+15,Arpico Galle,Hardware
+16,McLarens Kalutara,Groceries
+17,Cargills Food City Trincomalee,Fuel
+18,Cargills Food City Batticaloa,Electronics
+19,Nolimit Nuwara Eliya,Hardware
+20,Singer Kandy,supermarket
+21,McLarens Galle,Telecom
+22,Mobitel Hambantota,Restaurant
+23,Keells Super Colombo,Pharmacy
+24,Pizza Hut Nuwara Eliya,Supermarket
+25,Pizza Hut Kandy,Supermarket
+26,Abans Hambantota,Super Market
+27,Burger King Dehiwala,Groceries
+28,No Limit Galle,Apparel
+29,Nolimit Nuwara Eliya,FUEL 
+30,Keells Super Colombo,Telecom
+31,Glomark Gampaha,Supermarket
+32,Keells Super Monaragala,Furniture
+33,Cool Planet Puttalam,Restaurant
+34,Odel Dehiwala,Supermarket
+35,SPAR Kalutara,Hardware
+36,Cool Planet Colombo,Apparel
+37,Nolimit Jaffna,Restaurant
+38,Ceylon Petroleum Galle,Pharmacy
+39,Singer Polonnaruwa,Restaurant
+40,Dominos Matara,Super Market
+41,Pizza Hut Trincomalee,Telecom
+42,No Limit Ratnapura,Restaurant
+43,Arpico Kandy,Restaurant
+44,Pizza Hut Ratnapura,Telecom
+45,Laugfs Moratuwa,Pharmacy
+46,Arpico Trincomalee,Electronics
+47,Arpico Matara,Restaurant
+48,Damro Dehiwala,Groceries
+49,Cargills Food City Galle,Groceries
+50,Laugfs Polonnaruwa,restaurant 
+51,Fashion Bug Ampara,Pharmacy
+52,Nolimit Puttalam,Telecom
+53,No Limit Trincomalee,Electronics
+54,Dominos Nuwara Eliya,Furniture
+55,KFC Batticaloa,FUEL 
+56,Laugfs Nuwara Eliya,Groceries
+57,Keells Super Jaffna,Pharmacy
+58,Burger King Batticaloa,null
+59,Softlogic Kalutara,Pharmacy
+60,McLarens Batticaloa,Supermarket
+61,Keells Super Ratnapura,Electronics
+62,No Limit Negombo,Apparel
+63,Odel Batticaloa,Telecom
+64,Hemas Nuwara Eliya,Pharmacy
+65,Dialog Kalutara,Electronics
+66,Glomark Matale,Apparel
+67,Ceylon Petroleum Galle,Telecom
+68,Ceylon Petroleum Galle,Restaurant
+69,Odel Polonnaruwa,Furniture
+70,McLarens Polonnaruwa,Hardware
+71,Keells Super Dehiwala,Pharmacy
+72,SPAR Kurunegala,Groceries
+73,SPAR Matale,Restaurant
+74,Lanka IOC Dehiwala,restaurant 
+75,Lanka IOC Anuradhapura,Hardware
+76,Burger King Kurunegala,Restaurant
+77,Fashion Bug Trincomalee,FUEL 
+78,Arpico Kandy,Restaurant
+79,Dialog Kegalle,Apparel
+80,Mobitel Galle,Hardware
+81,Fashion Bug Hambantota,Fuel
+82,Laugfs Hambantota,Electronics
+83,Laugfs Batticaloa,Pharmacy
+84,Abans Negombo,Restaurant
+85,Damro Matale,Restaurant
+86,Nolimit Badulla,Restaurant
+87,Mobitel Kandy,Groceries
+88,KFC Hambantota,Fuel
+89,Mobitel Jaffna,Electronics
+90,Sathosa Jaffna,Fuel
+91,Arpico Puttalam,Telecom
+92,Mobitel Ampara,Hardware
+93,Softlogic Polonnaruwa,Supermarket
+94,McLarens Kurunegala,Restaurant
+95,Pizza Hut Kandy,Hardware
+96,Dominos Kalutara,Restaurant
+97,Fashion Bug Kalutara,Groceries
+98,Lanka IOC Galle,Pharmacy
+99,Cool Planet Jaffna,supermarket
+100,Odel Puttalam,Hardware
+101,Abans Colombo,Furniture
+102,Keells Super Colombo,Groceries
+103,Odel Trincomalee,Telecom
+104,Keells Super Anuradhapura,Groceries
+105,Fashion Bug Jaffna,Furniture
+106,No Limit Moratuwa,Furniture
+107,Cool Planet Kandy,Supermarket
+108,Glomark Nuwara Eliya,Supermarket
+109,SPAR Ratnapura,Hardware
+110,Odel Hambantota,Electronics
+111,Dominos Galle,Electronics
+112,Pizza Hut Dehiwala,Supermarket
+113,McLarens Ratnapura,-
+114,Pizza Hut Nuwara Eliya,Pharmacy
+115,No Limit Colombo,Fuel
+116,Ceylon Petroleum Trincomalee,Apparel
+117,Abans Monaragala,Apparel
+118,Dominos Gampaha,Restaurant
+119,Hemas Trincomalee,restaurant 
+120,Pizza Hut Ampara,Furniture
+121,Keells Super Colombo,Groceries
+122,No Limit Monaragala,Groceries
+123,Cargills Food City Jaffna,Supermarket
+124,Cargills Food City Ampara,Supermarket
+125,Cargills Food City Dehiwala,Pharmacy
+126,Burger King Batticaloa,Supermarket
+127,Keells Super Vavuniya,Hardware
+128,Cool Planet Matara,Telecom
+129,No Limit Polonnaruwa,Apparel
+130,Keells Super Monaragala,None
+131,Keells Super Hambantota,FUEL 
+132,Nolimit Moratuwa,Furniture
+133,Keells Super Colombo,Groceries
+134,Lanka IOC Moratuwa,Restaurant
+135,Damro Puttalam,Electronics
+136,Lanka IOC Puttalam,Supermarket
+137,Mobitel Negombo,Restaurant
+138,Hemas Polonnaruwa,Electronics
+139,Keells Super Colombo,Groceries
+140,Keells Super Colombo,Supermarket
+141,Mobitel Kegalle,Apparel
+142,Fashion Bug Monaragala,N/A
+143,Odel Trincomalee,Supermarket
+144,Softlogic Matara,Restaurant
+145,Lanka IOC Vavuniya,Electronics
+146,Nolimit Galle,Groceries
+147,No Limit Puttalam,Groceries
+148,Sathosa Batticaloa,Groceries
+149,Nolimit Kegalle,Telecom
+150,Keells Super Colombo,Furniture
+151,Arpico Colombo,Supermarket
+152,SPAR Monaragala,Apparel
+153,Lanka IOC Galle,Groceries
+154,Keells Super Galle,Hardware
+155,Odel Badulla,SUPERMARKET
+156,No Limit Kalutara,Hardware
+157,Cargills Food City Monaragala,Fuel
+158,Odel Galle,Telecom
+159,Laugfs Badulla,Hardware
+160,Fashion Bug Vavuniya,Supermarket
+161,Fashion Bug Trincomalee,None
+162,Dominos Anuradhapura,Fuel
+163,Arpico Matale,Super Market
+164,McLarens Kandy,Electronics
+165,Nolimit Kandy,Electronics
+166,McLarens Nuwara Eliya,Pharmacy
+167,Arpico Puttalam,Groceries
+168,Lanka IOC Jaffna,Super Market
+169,McLarens Hambantota,Fuel
+170,Abans Polonnaruwa,Electronics
+171,Nolimit Ampara,Telecom
+172,Dominos Puttalam,Hardware
+173,Arpico Kandy,restaurant 
+174,Odel Badulla,Telecom
+175,Cool Planet Kurunegala,Furniture
+176,Cool Planet Kegalle,Telecom
+177,Singer Anuradhapura,Pharmacy
+178,Arpico Matale,Furniture
+179,Damro Colombo,Hardware
+180,Mobitel Ratnapura,Electronics
+181,Keells Super Colombo,supermarket
+182,Abans Moratuwa,Hardware
+183,Mobitel Gampaha,Electronics
+184,Nolimit Gampaha,Supermarket
+185,Fashion Bug Batticaloa,Supermarket
+186,Dialog Gampaha,Supermarket
+187,Cargills Food City Puttalam,Restaurant
+188,Dialog Polonnaruwa,Groceries
+189,Arpico Batticaloa,Fuel
+190,Cool Planet Badulla,Furniture
+191,Pizza Hut Matale,Furniture
+192,Laugfs Polonnaruwa,Hardware
+193,Arpico Kalutara,Electronics
+194,Cargills Food City Monaragala,Fuel
+195,Abans Dehiwala,Telecom
+196,Burger King Kegalle,Restaurant
+197,Pizza Hut Kurunegala,Telecom
+198,Nolimit Ratnapura,Pharmacy
+199,No Limit Batticaloa,Furniture
+200,Keells Super Colombo,Apparel
+201,KFC Kandy,Hardware
+202,SPAR Moratuwa,Supermarket
+203,Arpico Badulla,Furniture
+204,Arpico Galle,Groceries
+205,Ceylon Petroleum Kandy,Fuel
+206,Ceylon Petroleum Matale,Electronics
+207,Cool Planet Jaffna,Apparel
+208,Singer Anuradhapura,Pharmacy
+209,Fashion Bug Galle,Apparel
+210,Burger King Matale,Fuel
+211,SPAR Batticaloa,Fuel
+212,Keells Super Colombo,Furniture
+213,Glomark Monaragala,Hardware
+214,Dominos Ratnapura,Electronics
+215,Burger King Hambantota,Pharmacy
+216,No Limit Puttalam,Fuel
+217,Keells Super Puttalam,Apparel
+218,McLarens Kurunegala,Supermarket
+219,Odel Moratuwa,Groceries
+220,Mobitel Trincomalee,Restaurant
+221,SPAR Polonnaruwa,Pharmacy
+222,Nolimit Badulla,
+223,Arpico Colombo,Pharmacy
+224,Singer Badulla,Telecom
+225,Dialog Trincomalee,Furniture
+226,SPAR Jaffna,Restaurant
+227,Arpico Kalutara,Electronics
+228,Damro Kandy,SUPERMARKET
+229,Dialog Kegalle,Telecom
+230,Fashion Bug Vavuniya,Hardware
+231,Cargills Food City Matale,Fuel
+232,Keells Super Colombo,Electronics
+233,Keells Super Batticaloa,Fuel
+234,Softlogic Dehiwala,Furniture
+235,Softlogic Kalutara,Electronics
+236,Pizza Hut Vavuniya,Pharmacy
+237,Keells Super Nuwara Eliya,Supermarket
+238,Ceylon Petroleum Batticaloa,Pharmacy
+239,KFC Colombo,Pharmacy
+240,Dialog Anuradhapura,Restaurant
+241,Pizza Hut Kegalle,Telecom
+242,KFC Matara,Electronics
+243,Laugfs Kalutara,Telecom
+244,Damro Vavuniya,Hardware
+245,Keells Super Badulla,Fuel
+246,Pizza Hut Monaragala,Apparel
+247,Keells Super Colombo,Electronics
+248,No Limit Galle,Restaurant
+249,Keells Super Colombo,Telecom
+250,Keells Super Kandy,Telecom
+251,Cool Planet Jaffna,Fuel
+252,Pizza Hut Puttalam,Electronics
+253,Ceylon Petroleum Negombo,Supermarket
+254,Hemas Matale,Restaurant
+255,Odel Kandy,SUPERMARKET
+256,Fashion Bug Dehiwala, 
+257,Odel Trincomalee,Apparel
+258,Laugfs Kurunegala,Groceries
+259,Hemas Moratuwa,Supermarket
+260,KFC Matara,Supermarket
+261,Odel Galle,Telecom
+262,Keells Super Matale,Pharmacy
+263,Softlogic Hambantota,SUPERMARKET
+264,Nolimit Kalutara,Telecom
+265,Arpico Kegalle,Pharmacy
+266,Dialog Polonnaruwa,Hardware
+267,Dominos Ampara,Furniture
+268,KFC Badulla,Supermarket
+269,No Limit Matara,Furniture
+270,Abans Colombo,Groceries
+271,Dominos Dehiwala,Supermarket
+272,McLarens Negombo,Super Market
+273,Cargills Food City Kalutara,SUPERMARKET
+274,Odel Batticaloa,Fuel
+275,Ceylon Petroleum Hambantota,Apparel
+276,McLarens Trincomalee,
+277,Mobitel Kegalle,Pharmacy
+278,Pizza Hut Colombo,Furniture
+279,KFC Dehiwala,supermarket
+280,Burger King Hambantota,Supermarket
+281,Softlogic Hambantota,Telecom
+282,Cargills Food City Puttalam,Hardware
+283,Dialog Jaffna,Telecom
+284,Ceylon Petroleum Badulla,Furniture
+285,Softlogic Vavuniya,Apparel
+286,KFC Anuradhapura,Pharmacy
+287,Odel Jaffna,Electronics
+288,Odel Nuwara Eliya,Telecom
+289,Keells Super Colombo,Supermarket
+290,Ceylon Petroleum Ampara,Pharmacy
+291,Dialog Nuwara Eliya,Pharmacy
+292,Lanka IOC Anuradhapura,Restaurant
+293,Cargills Food City Kalutara,SUPERMARKET
+294,Dialog Badulla,Pharmacy
+295,Nolimit Ampara,Telecom
+296,Singer Jaffna,Hardware
+297,Odel Ampara,NA
+298,Cargills Food City Hambantota,Groceries
+299,Arpico Polonnaruwa,Pharmacy
+300,Cargills Food City Colombo,Pharmacy

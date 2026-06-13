@@ -37,15 +37,23 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 
 ```
 .
-└── Week 01/                  Loading & profiling: get messy data into PostgreSQL
+├── Week 01/                  Loading & profiling: get messy data into PostgreSQL
+│   ├── README.md             Week guide
+│   ├── create_tables.sql     Schema + tables
+│   ├── tutorial 1.sql        In-class SQL walkthrough
+│   ├── Homework Z2D C1 W1.pdf Weekly assignment
+│   └── Dataset/              The week's CSV dataset + its README
+└── Week 02/                  Warehouse architecture & data modeling (XYZ Bank)
     ├── README.md             Week guide
-    ├── create_tables.sql     Schema + tables
-    ├── tutorial 1.sql        In-class SQL walkthrough
-    ├── Homework Z2D C1 W1.pdf Weekly assignment
+    ├── bank_table_create.sql Source (OLTP) schema
+    ├── inmon.sql             Inmon normalized EDW model
+    ├── kimball.sql           Kimball dimensional model
+    ├── data_vault.sql        Data Vault model
+    ├── OBT.sql               One Big Table model
     └── Dataset/              The week's CSV dataset + its README
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**.
 
 ---
 

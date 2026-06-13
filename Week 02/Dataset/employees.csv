@@ -1,0 +1,121 @@
+employee_id,employee_no,name,position,branch_id
+1,EMP0001,Janaka Gunawardena,Cashier,3
+2,EMP0002,Nuzrath Hassan,Cashier,6
+3,EMP0003,Gayan Ekanayake,Loan Officer,2
+4,EMP0004,Kumari Perera,Loan Officer,6
+5,EMP0005,Gayani Abeywickrama,Operations Officer,9
+6,EMP0006,Yasas Jayawardena,Branch Manager,5
+7,EMP0007,Nuzrath Jiffry,Branch Manager,1
+8,EMP0008,Mahesh Kumara,Branch Manager,4
+9,EMP0009,Divya Sivakumar,Customer Officer,2
+10,EMP0010,Vindya Perera,Teller,2
+11,EMP0011,Dilshan Perera,Branch Manager,3
+12,EMP0012,Nuzrath Jiffry,Relationship Manager,6
+13,EMP0013,Nethmi Wickramasinghe,Loan Officer,4
+14,EMP0014,Chamara Fernando,Operations Officer,9
+15,EMP0015,Niluka Gunawardena,Loan Officer,4
+16,EMP0016,Roshan Fernando,Customer Officer,8
+17,EMP0017,ISHARA LIYANAGE,TELLER,3
+18,EMP0018,Pradeepan Kumar,Cust. Officer,6
+19,EMP0019,Kavinda Weerasinghe,Teller,9
+20,EMP0020,Mahesh Kumara,Customer Officer,7
+21,EMP0021,Prabha Ratnayake,Loan Officer,3
+22,EMP0022,Ama Gunawardena,Teller,1
+23,EMP0023,Gayan Dissanayake,Relationship Manager,1
+24,EMP0024,Lahiru Perera,Operations Officer,5
+25,EMP0025,Hiruni Senanayake,Teller,5
+26,EMP0026,Pradeep Silva,Branch Manager,4
+27,EMP0027,AMAL WEERASINGHE,Operations Officer,4
+28,EMP0028,Thanuja Rajapaksa,Teller,2
+29,EMP0029,Pradeep Liyanage,Branch Manager,10
+30,EMP0030,Nethmi Karunaratne,Branch Manager,1
+31,EMP0031,Pradeepan Sivakumar,Loan Officer,10
+32,EMP0032,Chathurika Jayawardena,Teller,5
+33,EMP0033,Riyaz Hameed,Operations Officer,3
+34,EMP0034,Sanjeewa Rathnayaka,Cashier,7
+35,EMP0035,Kavya Wickramasinghe,Relationship Manager,9
+36,EMP0036,Iresha Gunasekara,Br. Manager,4
+37,EMP0037,Pasan Herath,Relationship Manager,7
+38,EMP0038,Anjali Thevarajah,Teller,2
+39,EMP0039,PRIYA SIVAKUMAR,Operations Officer,10
+40,EMP0040,Hashini Jayawardena,Operations Officer,9
+41,EMP0041,Lakshmi Kumar,TELLER,5
+42,EMP0042,Anjali Subramaniam,Cust. Officer,2
+43,EMP0043,Lakshika Gunasekara,Relationship Manager,6
+44,EMP0044,Isuru Kumara,Cashier,10
+45,EMP0045,Gayan Herath,Operations Officer,10
+46,EMP0046,Heshan Fernando,Loan Officer,9
+47,EMP0047,Chathura Ratnayake,Loan Officer,9
+48,EMP0048,Lakshika Rathnayaka,Customer Officer,6
+49,EMP0049,Tharindu Jayasuriya,TELLER,9
+50,EMP0050,Rashmi Wickramasinghe,Operations Officer,4
+51,EMP0051,Ravindu Gunasekara,Operations Officer,3
+52,EMP0052,Thilina Jayawardena,Relationship Manager,7
+53,EMP0053,LAKSHIKA PERERA,Operations Officer,10
+54,EMP0054,Vindya Rajapaksa,Loan Officer,2
+55,EMP0055,Dulani Wickramasinghe,Loan Officer,3
+56,EMP0056,Sahan Senanayake,Loan Officer,1
+57,EMP0057,Thanuja Mendis,loan officer,10
+58,EMP0058,Hiruni Rajapaksa,Relationship Manager,9
+59,EMP0059,Chathura Peiris,Operations Officer,9
+60,EMP0060,Iresha Jayawardena,Branch Manager,9
+61,EMP0061,Lahiru Bandara,Loan Officer,10
+62,EMP0062,Erandi Wickramasinghe,Loan Officer,10
+63,EMP0063,Suresh Sivakumar,Cashier,10
+64,EMP0064,Chathurika Silva,Branch Manager,2
+65,EMP0065,Janani Jayawardena,Loan Officer,10
+66,EMP0066,Meera Sivakumar,Branch Manager,7
+67,EMP0067,Dilshan Peiris,Loan Officer,4
+68,EMP0068,Ramesh Selvam,Teller,8
+69,EMP0069,Mubarak Marikar,Operations Officer,10
+70,EMP0070,Upeksha Amarasinghe,Cashier,6
+71,EMP0071,Mahesh Bandara,Customer Officer,5
+72,EMP0072,Thilina Liyanage,Cashier,10
+73,EMP0073,Amal Perera,Operations Officer,10
+74,EMP0074,Dilini Silva,Customer Officer,10
+75,EMP0075,Nethmi Gunawardena,Relationship Manager,8
+76,EMP0076,Upeksha Fernando,Branch Manager,5
+77,EMP0077,Meera Thevarajah,Branch Manager,5
+78,EMP0078,Amaya Karunaratne,Operations Officer,4
+79,EMP0079,Ravindu Herath,Loan Officer,8
+80,EMP0080,Iresha Wijesinghe,Teller,2
+81,EMP0081,Tharushi Mendis,Operations Officer,2
+82,EMP0082,Sahan Rajapaksa,Operations Officer,6
+83,EMP0083,KAVINDA ABEYWICKRAMA,Cashier,5
+84,EMP0084,Hussain Rahman,Loan Officer,10
+85,EMP0085,Thilina Jayasuriya,Br. Manager,7
+86,EMP0086,Senuri Kumara,Teller,3
+87,EMP0087,Erandi Mendis,Cashier,5
+88,EMP0088,Vijay Sivakumar,Relationship Manager,7
+89,EMP0089,Dulani Wickramasinghe,teller,8
+90,EMP0090,Dinesh Kumara,Customer Officer,9
+91,EMP0091,Gayan Rathnayaka,Branch Manager,10
+92,EMP0092,Ruwan Silva,Branch Manager,1
+93,EMP0093,Lakshika Weerasinghe,Loan Officer,4
+94,EMP0094,GAYANI SAMARASINGHE,Loan Officer,7
+95,EMP0095,Nuzrath Hassan,Teller,7
+96,EMP0096,Mohamed Rahman,Branch Manager,7
+97,EMP0097,Sachini Herath,Loan Officer,3
+98,EMP0098,FATHIMA MARIKAR,Customer Officer,2
+99,EMP0099,Priya Raj,Br. Manager,1
+100,EMP0100,Amal Gunawardena,Branch Manager,6
+101,EMP0101,DULANI FERNANDO,Customer Officer,2
+102,EMP0102,Hashini Kumara,Branch Manager,1
+103,EMP0103,Gayan Senanayake,Relationship Manager,3
+104,EMP0104,Ramesh Subramaniam,Customer Officer,4
+105,EMP0105,Kumari Fernando,Operations Officer,3
+106,EMP0106,Ishara Senanayake,Operations Officer,5
+107,EMP0107,Dinesh Mendis,Branch Manager,7
+108,EMP0108,Faizal Rahman,Cust. Officer,6
+109,EMP0109,Pradeepan Raj,Cashier,9
+110,EMP0110,Tharushi Senanayake,Customer Officer,7
+111,EMP0111,Piyumi Fernando,Customer Officer,7
+112,EMP0112,Thanuja Peiris,Teller,3
+113,EMP0113,Upeksha Wijesinghe,Cust. Officer,2
+114,EMP0114,Dulani Abeywickrama,Relationship Manager,5
+115,EMP0115,Chamara Mendis,Branch Manager,9
+116,EMP0116,Ama Liyanage,Customer Officer,9
+117,EMP0117,Nuwan Dissanayake,Loan Officer,2
+118,EMP0118,Lahiru Bandara,Teller,3
+119,EMP0119,Hussain Cassim,Relationship Manager,5
+120,EMP0120,Ramesh Raj,Customer Officer,2

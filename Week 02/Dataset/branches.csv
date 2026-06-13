@@ -1,0 +1,11 @@
+branch_id,branch_code,name,address,ifsc_code
+1,BR001,  colombo branch ,"No 219, Main Street, Colombo",XYZB0000001
+2,BR002,Kandy Branch,"No 90, Main Street, Kandy",XYZB0000002
+3,BR003,Galle Branch,"No 164, Main Street, Galle",XYZB0000003
+4,BR004,Jaffna Branch,"No 108, Main Street, Jaffna",NULL
+5,BR005,Negombo Branch,"No 223, Main Street, Negombo",XYZB0000005
+6,BR006,KURUNEGALA BRANCH,"No 67, Main Street, Kurunegala",XYZB0000006
+7,BR007,Anuradhapura Branch,"No 96, Main Street, Anuradhapura",XYZB0000007
+8,BR008,Batticaloa Branch,"No 283, Main Street, Batticaloa",-
+9,BR009,Matara Branch,"No 71, Main Street, Matara",XYZB0000009
+10,BR010,Ratnapura Branch,"No 156, Main Street, Ratnapura",XYZB0000010
