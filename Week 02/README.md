@@ -11,6 +11,7 @@ Zero to Data Engineer — Week 02. Load XYZ Bank's operational export into Postg
 | `kimball.sql` | **Kimball** — a dimensional model with dimension + fact tables (`kimball` schema). |
 | `data_vault.sql` | **Data Vault** — hubs, links, and satellites (`data_vault` schema). |
 | `OBT.sql` | **One Big Table** — a single wide, denormalized analytics table (`obt` schema). |
+| `social_media_table_create.sql` | The typed `raw` schema for the Week 01 social-media dataset, kept here for reference. |
 | `Dataset/` | The 13 CSV files + a detailed README explaining the data and how to import it. |
 
 The four modeling scripts build their tables in a separate `bank_olap` database — the analytics (OLAP) side — so you can compare them against the operational source side by side.

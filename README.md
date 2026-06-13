@@ -50,6 +50,7 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
     ├── kimball.sql           Kimball dimensional model
     ├── data_vault.sql        Data Vault model
     ├── OBT.sql               One Big Table model
+    ├── social_media_table_create.sql  Week 01 social-media raw schema (reference)
     └── Dataset/              The week's CSV dataset + its README
 ```
 
