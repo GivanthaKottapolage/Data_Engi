@@ -15,8 +15,6 @@ CREATE TABLE IF NOT EXISTS core_banking.customer (
 );
 
 
-select * from core_banking.customer;
-
 
 
 CREATE TABLE IF NOT EXISTS core_banking.customer_address (
@@ -59,8 +57,6 @@ CREATE TABLE IF NOT EXISTS core_banking.branch (
     ifsc_code VARCHAR(20)
 );
 
-select * from core_banking.branch;
-
 
 CREATE TABLE IF NOT EXISTS core_banking.employee (
     employee_id BIGINT PRIMARY KEY,
@@ -74,8 +70,6 @@ CREATE TABLE IF NOT EXISTS core_banking.employee (
         REFERENCES core_banking.branch(branch_id)
 );
 
-
-select * from core_banking.employee;
 
 -- drop table core_banking.account;
 
@@ -92,8 +86,6 @@ CREATE TABLE IF NOT EXISTS core_banking.account (
         FOREIGN KEY (branch_id)
         REFERENCES core_banking.branch(branch_id)
 );
-
-select * from core_banking.account;
 
 -- drop table core_banking.account_ownership;
 CREATE TABLE IF NOT EXISTS core_banking.account_ownership (
@@ -145,9 +137,9 @@ CREATE TABLE IF NOT EXISTS loans.loan_repayment (
 
 CREATE SCHEMA IF NOT EXISTS cards;
 
-drop table cards.card;
+-- drop table cards.card;
 
-CREATE TABLE cards.card (
+CREATE TABLE IF NOT EXISTS cards.card (
     card_id BIGINT PRIMARY KEY,
     card_number VARCHAR(30) NOT NULL UNIQUE,
     account_id BIGINT NOT NULL,
