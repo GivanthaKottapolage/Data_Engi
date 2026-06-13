@@ -327,7 +327,7 @@ Expected row counts:
 | merchant | 300 |
 | transaction | 42,000 |
 
-**Every table should load completely — the counts should match exactly.** Unlike a fully-typed schema, this one keeps the messy date and amount columns as text, so nothing is rejected at load time. The mess lives *inside* the values, and that is what you clean next.
+**Your loaded counts may be lower than these — and that's expected.** The import skips any row it can't insert — for example, a missing value in a `NOT NULL` column, or a value that breaks a constraint. DataGrip reports how many rows were skipped per file; note those numbers and investigate the rejected rows during profiling — don't try to force the totals to match.
 
 ---
 
