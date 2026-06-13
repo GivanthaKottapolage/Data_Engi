@@ -1,3 +1,15 @@
+-- Check if database exists, create only if it doesn't
+
+-- PostgreSQL does not support CREATE DATABASE IF NOT EXISTS
+
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'bank_oltp') THEN
+        PERFORM dblink_exec('dbname=postgres', 'CREATE DATABASE bank_oltp');
+    END IF;
+END
+$$;
+
 create SCHEMA IF NOT EXISTS core_banking;
 
 -- drop table core_banking.customer;
@@ -13,7 +25,6 @@ CREATE TABLE IF NOT EXISTS core_banking.customer (
     occupation VARCHAR(100),
     email VARCHAR(255)
 );
-
 
 
 
@@ -156,7 +167,7 @@ CREATE TABLE IF NOT EXISTS cards.card (
 CREATE SCHEMA IF NOT EXISTS channels;
 
 
-CREATE TABLE channels.atm (
+CREATE TABLE IF NOT EXISTS channels.atm (
     atm_id BIGINT PRIMARY KEY,
     atm_code VARCHAR(30) NOT NULL UNIQUE,
     branch_id BIGINT NOT NULL,
@@ -216,4 +227,3 @@ CREATE TABLE IF NOT EXISTS core_banking.transaction (
         FOREIGN KEY (loan_id)
         REFERENCES loans.loan(loan_id)
 );
-

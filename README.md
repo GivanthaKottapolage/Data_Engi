@@ -39,7 +39,7 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 .
 ├── Week 01/                  Loading & profiling: get messy data into PostgreSQL
 │   ├── README.md             Week guide
-│   ├── create_tables.sql     Schema + tables
+│   ├── social_media_table_create.sql  Schema + tables
 │   ├── tutorial 1.sql        In-class SQL walkthrough
 │   ├── Homework Z2D C1 W1.pdf Weekly assignment
 │   └── Dataset/              The week's CSV dataset + its README
@@ -50,7 +50,6 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
     ├── kimball.sql           Kimball dimensional model
     ├── data_vault.sql        Data Vault model
     ├── OBT.sql               One Big Table model
-    ├── social_media_table_create.sql  Week 01 social-media raw schema (reference)
     └── Dataset/              The week's CSV dataset + its README
 ```
 
