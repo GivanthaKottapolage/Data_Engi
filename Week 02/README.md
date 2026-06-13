@@ -11,6 +11,7 @@ Zero to Data Engineer — Week 02. Load XYZ Bank's operational export into Postg
 | `kimball.sql` | **Kimball** — a dimensional model with dimension + fact tables (`kimball` schema). |
 | `data_vault.sql` | **Data Vault** — hubs, links, and satellites (`data_vault` schema). |
 | `OBT.sql` | **One Big Table** — a single wide, denormalized analytics table (`obt` schema). |
+| `Home Work - Banking KPI.pdf` | This week's assignment. |
 | `Dataset/` | The 13 CSV files + a detailed README explaining the data and how to import it. |
 
 The four modeling scripts build their tables in a separate `bank_olap` database — the analytics (OLAP) side — so you can compare them against the operational source side by side.
@@ -33,6 +34,7 @@ When prompted, log in with your GitHub account (a browser window opens, or paste
 1. Open the [Dataset README](Dataset/README.md) and follow it to run `bank_table_create.sql` and load the 13 CSVs into PostgreSQL.
 2. Profile and clean the data (the values are intentionally dirty — see the Dataset README).
 3. Explore the four modeling approaches: run `inmon.sql`, `kimball.sql`, `data_vault.sql`, and `OBT.sql`, and compare how each one organizes the same facts to answer the bank's business questions.
+4. Complete `Home Work - Banking KPI.pdf`.
 
 ---
 
