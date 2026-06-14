@@ -6,7 +6,7 @@ Zero to Data Engineer — Week 01. Load a messy social-media dataset into Postgr
 
 | File | What it is |
 |------|------------|
-| `create_tables.sql` | Creates the `raw` schema and all 7 tables with types and foreign keys. Run this first. |
+| `social_media_table_create.sql` | Creates the `raw` schema and all 7 tables with types and foreign keys. Run this first. |
 | `tutorial 1.sql` | The SQL walkthrough we cover in class — Sections 0–19 (joins, CTEs, views, window functions, indexing, partitioning, star schema, and more). |
 | `Homework Z2D C1 W1.pdf` | This week's assignment. |
 | `Dataset/` | The 7 CSV files + a detailed README explaining the data and how to import it. |
@@ -27,7 +27,7 @@ When prompted, log in with your GitHub account (a browser window opens, or paste
 ## How to start
 
 1. Open the [Dataset README](Dataset/README.md) and follow it to load the 7 CSVs into PostgreSQL.
-2. Run `create_tables.sql` to set up the schema and tables.
+2. Run `social_media_table_create.sql` to set up the schema and tables.
 3. Work through `tutorial 1.sql`.
 4. Complete `Homework Z2D C1 W1.pdf`.
 
