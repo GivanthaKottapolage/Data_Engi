@@ -50,7 +50,7 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
     ├── kimball.sql           Kimball dimensional model
     ├── data_vault.sql        Data Vault model
     ├── OBT.sql               One Big Table model
-    ├── Home Work - Banking KPI.pdf  Weekly assignment
+    ├── week-02-homework-banking-kpi.pdf  Weekly assignment
     └── Dataset/              The week's CSV dataset + its README
 ```
 
