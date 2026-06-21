@@ -43,18 +43,21 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 │   ├── tutorial 1.sql        In-class SQL walkthrough
 │   ├── Homework Z2D C1 W1.pdf Weekly assignment
 │   └── Dataset/              The week's CSV dataset + its README
-└── Week 02/                  Warehouse architecture & data modeling (XYZ Bank)
-    ├── README.md             Week guide
-    ├── bank_table_create.sql Source (OLTP) schema
-    ├── inmon.sql             Inmon normalized EDW model
-    ├── kimball.sql           Kimball dimensional model
-    ├── data_vault.sql        Data Vault model
-    ├── OBT.sql               One Big Table model
-    ├── week-02-homework-banking-kpi.pdf  Weekly assignment
-    └── Dataset/              The week's CSV dataset + its README
+├── Week 02/                  Warehouse architecture & data modeling (XYZ Bank)
+│   ├── README.md             Week guide
+│   ├── bank_table_create.sql Source (OLTP) schema
+│   ├── inmon.sql             Inmon normalized EDW model
+│   ├── kimball.sql           Kimball dimensional model
+│   ├── data_vault.sql        Data Vault model
+│   ├── OBT.sql               One Big Table model
+│   ├── week-02-homework-banking-kpi.pdf  Weekly assignment
+│   └── Dataset/              The week's CSV dataset + its README
+└── Week 03/                  Basic Python ETL: OLTP → OLAP
+    ├── README.md             Basic Python ETL demo guide
+    └── basic_etl/            ETL scripts (config, db, main) + sql/ models
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**.
 
 ---
 
