@@ -52,12 +52,16 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 │   ├── OBT.sql               One Big Table model
 │   ├── week-02-homework-banking-kpi.pdf  Weekly assignment
 │   └── Dataset/              The week's CSV dataset + its README
-└── Week 03/                  Basic Python ETL: OLTP → OLAP
-    ├── README.md             Basic Python ETL demo guide
-    └── basic_etl/            ETL scripts (config, db, main) + sql/ models
+├── Week 03/                  Basic Python ETL: OLTP → OLAP
+│   ├── README.md             Basic Python ETL demo guide
+│   └── basic_etl/            ETL scripts (config, db, main) + sql/ models
+└── Week 04/                  Star schema: building facts & dimensions
+    ├── README.md             Week guide
+    ├── fact_and_dim.sql      Schema (DDL): dimension + fact tables
+    └── ingest_dim_and_fact.sql  Load (DML): populate dims & facts
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**.
 
 ---
 
