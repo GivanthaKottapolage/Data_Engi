@@ -1,0 +1,45 @@
+city_id,country_id,city_name
+1,1,Colombo
+2,1,Kandy
+3,1,Galle
+4,1,Jaffna
+5,1,Negombo
+6,1,Kurunegala
+7,2,Mumbai
+8,2,Bengaluru
+9,2,Chennai
+10,2,Delhi
+11,2,Hyderabad
+12,3,New York
+13,3,Los Angeles
+14,3,Chicago
+15,3,Houston
+16,3,Seattle
+17,4,London
+18,4,Manchester
+19,4,Birmingham
+20,4,Leeds
+21,5,Sydney
+22,5,Melbourne
+23,5,Brisbane
+24,6,Singapore
+25,7,Dubai
+26,7,Abu Dhabi
+27,8,Toronto
+28,8,Vancouver
+29,8,Montreal
+30,9,Berlin
+31,9,Munich
+32,9,Hamburg
+33,10,Kuala Lumpur
+34,10,Penang
+35,11,Auckland
+36,11,Wellington
+37,12,Johannesburg
+38,12,Cape Town
+39,13,Manila
+40,13,Cebu City
+41,14,Amsterdam
+42,14,Rotterdam
+43,15,Dublin
+44,15,Cork
