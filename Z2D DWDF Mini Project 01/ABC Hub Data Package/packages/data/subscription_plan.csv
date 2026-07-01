@@ -1,0 +1,5 @@
+plan_id,plan_name,monthly_fee,video_quality,max_devices
+1,Basic,4.99,SD,1
+2,Standard,8.99,HD,2
+3,Premium,13.99,Full HD,4
+4,Family,17.99,4K,6

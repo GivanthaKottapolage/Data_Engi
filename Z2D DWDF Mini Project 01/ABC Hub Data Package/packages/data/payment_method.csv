@@ -1,0 +1,6 @@
+payment_method_id,method_name
+1,Credit Card
+2,Debit Card
+3,PayPal
+4,Mobile Wallet
+5,Bank Transfer
