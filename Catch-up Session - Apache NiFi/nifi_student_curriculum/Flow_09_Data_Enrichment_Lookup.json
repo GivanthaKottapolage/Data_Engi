@@ -1,0 +1,304 @@
+{
+  "flowContents": {
+    "identifier": "5ae89be8-64ae-46f9-a45b-a4fe95fa5085",
+    "instanceIdentifier": "51c6bc3e-8afc-4112-8a58-566af252b71b",
+    "name": "Flow 09: Data Enrichment Lookup",
+    "comments": "[Advanced] Curriculum Lesson: LookupRecord mapping driver IDs to names.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "1bf0717e-5270-45cc-a429-439ca063e774",
+        "instanceIdentifier": "d70ba16e-2be6-4204-94b5-0a905e7d9b07",
+        "name": "Module 09 Workspace",
+        "comments": "[Advanced] LookupRecord mapping driver IDs to names",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "19417dba-6bf2-499b-85b4-6b5d391fd3f2",
+            "instanceIdentifier": "ed97b720-f941-4f32-bad2-f04c1e6161e5",
+            "name": "Generate Orders Batch",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "[\n  {\n    \"order_id\": 1001,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Seafood Platter\",\n    \"amount\": 45.5,\n    \"driver_id\": \"D01\"\n  },\n  {\n    \"order_id\": 1002,\n    \"type\": \"PICKUP\",\n    \"item\": \"Margherita Pizza\",\n    \"amount\": 18.0,\n    \"driver_id\": \"D02\"\n  },\n  {\n    \"order_id\": 1003,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Sushi Combo\",\n    \"amount\": 32.75,\n    \"driver_id\": \"D03\"\n  },\n  {\n    \"order_id\": 1004,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Burger Meal\",\n    \"amount\": 15.25,\n    \"driver_id\": \"D01\"\n  },\n  {\n    \"order_id\": 1005,\n    \"type\": \"PICKUP\",\n    \"item\": \"Pad Thai\",\n    \"amount\": 21.9,\n    \"driver_id\": \"D02\"\n  }\n]",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "dbdea349-2d75-4392-89c8-cd17c8cc3b5a",
+            "instanceIdentifier": "cbbfdbd9-39b5-46ac-ae29-db56a6f23d62",
+            "name": "Enrich With Driver Name",
+            "type": "org.apache.nifi.processors.standard.LookupRecord",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Record Reader": "8e88b11e-703a-46b9-99b8-383c3e8b2b18",
+              "Record Writer": "98ec47d5-dc09-45f0-9472-dd7a1ebf7628",
+              "Lookup Service": "5508ce57-468a-4788-88cf-36fdcbd09c79",
+              "Result RecordPath": "/driver_name",
+              "Routing Strategy": "Route to Success",
+              "driver_id": "/driver_id"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "ec743977-6fe6-4026-a46c-c2db907d178f",
+            "instanceIdentifier": "bf7bae60-d6fd-4e3a-a375-fa183af367fa",
+            "name": "Log Enriched Record",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "Log Prefix": "ENRICHED"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "de66027b-be21-4f62-a6a5-764b74f1625e",
+            "instanceIdentifier": "e1a46326-0f25-4fbf-972d-e8f0ab558150",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "19417dba-6bf2-499b-85b4-6b5d391fd3f2",
+              "type": "PROCESSOR",
+              "groupId": "1bf0717e-5270-45cc-a429-439ca063e774",
+              "name": "Generate Orders Batch"
+            },
+            "destination": {
+              "id": "dbdea349-2d75-4392-89c8-cd17c8cc3b5a",
+              "type": "PROCESSOR",
+              "groupId": "1bf0717e-5270-45cc-a429-439ca063e774",
+              "name": "Enrich With Driver Name"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "ac14b106-f6fe-4b4c-9f15-423ad24375fa",
+            "instanceIdentifier": "66f24171-c2f3-478e-b92d-35bdd5b3dac3",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "dbdea349-2d75-4392-89c8-cd17c8cc3b5a",
+              "type": "PROCESSOR",
+              "groupId": "1bf0717e-5270-45cc-a429-439ca063e774",
+              "name": "Enrich With Driver Name"
+            },
+            "destination": {
+              "id": "ec743977-6fe6-4026-a46c-c2db907d178f",
+              "type": "PROCESSOR",
+              "groupId": "1bf0717e-5270-45cc-a429-439ca063e774",
+              "name": "Log Enriched Record"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [
+          {
+            "identifier": "8e88b11e-703a-46b9-99b8-383c3e8b2b18",
+            "instanceIdentifier": "4049c9c6-059f-4dae-8186-aecabe34eb9a",
+            "name": "JSON Reader (Infer Schema)",
+            "type": "org.apache.nifi.json.JsonTreeReader",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-record-serialization-services-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "CONTROLLER_SERVICE",
+            "properties": {
+              "Schema Access Strategy": "Infer Schema"
+            },
+            "propertyDescriptors": {},
+            "controllerServiceApis": [],
+            "bulletinLevel": "WARN",
+            "scheduledState": "ENABLED"
+          },
+          {
+            "identifier": "98ec47d5-dc09-45f0-9472-dd7a1ebf7628",
+            "instanceIdentifier": "c5ae16d0-86e4-4add-8c8c-ef0c3597ce24",
+            "name": "JSON Writer",
+            "type": "org.apache.nifi.json.JsonRecordSetWriter",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-record-serialization-services-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "CONTROLLER_SERVICE",
+            "properties": {
+              "Schema Write Strategy": "Do Not Write Schema"
+            },
+            "propertyDescriptors": {},
+            "controllerServiceApis": [],
+            "bulletinLevel": "WARN",
+            "scheduledState": "ENABLED"
+          },
+          {
+            "identifier": "5508ce57-468a-4788-88cf-36fdcbd09c79",
+            "instanceIdentifier": "72e290f2-82e4-40cb-bfe3-200a79031f5b",
+            "name": "Driver Name Lookup (CSV)",
+            "type": "org.apache.nifi.lookup.CSVRecordLookupService",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-lookup-services-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "CONTROLLER_SERVICE",
+            "properties": {
+              "CSV File": "/tmp/nifi_training/datasets/drivers_lookup.csv",
+              "Lookup Key Column": "driver_id",
+              "CSV Format": "RFC 4180",
+              "Character Set": "UTF-8"
+            },
+            "propertyDescriptors": {},
+            "controllerServiceApis": [],
+            "bulletinLevel": "WARN",
+            "scheduledState": "ENABLED"
+          }
+        ],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

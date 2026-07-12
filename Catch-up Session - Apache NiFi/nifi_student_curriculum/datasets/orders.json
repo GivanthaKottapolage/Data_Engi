@@ -1,0 +1,37 @@
+[
+  {
+    "order_id": 1001,
+    "type": "DELIVERY",
+    "item": "Seafood Platter",
+    "amount": 45.5,
+    "driver_id": "D01"
+  },
+  {
+    "order_id": 1002,
+    "type": "PICKUP",
+    "item": "Margherita Pizza",
+    "amount": 18.0,
+    "driver_id": "D02"
+  },
+  {
+    "order_id": 1003,
+    "type": "DELIVERY",
+    "item": "Sushi Combo",
+    "amount": 32.75,
+    "driver_id": "D03"
+  },
+  {
+    "order_id": 1004,
+    "type": "DELIVERY",
+    "item": "Burger Meal",
+    "amount": 15.25,
+    "driver_id": "D01"
+  },
+  {
+    "order_id": 1005,
+    "type": "PICKUP",
+    "item": "Pad Thai",
+    "amount": 21.9,
+    "driver_id": "D02"
+  }
+]

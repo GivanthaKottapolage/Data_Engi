@@ -1,0 +1,311 @@
+{
+  "flowContents": {
+    "identifier": "e757c4f3-99ab-4679-a631-68218aa86391",
+    "instanceIdentifier": "8ad37641-867d-4804-b9bd-19034edfab39",
+    "name": "Flow 02: File System Ingestion",
+    "comments": "[Beginner] Curriculum Lesson: ListFile, FetchFile, and PutFile local management.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "e49aaca1-e78d-401f-9650-d4656bb74577",
+        "instanceIdentifier": "201fc1d3-3a20-4252-8a7c-176688e4c7c6",
+        "name": "Module 02 Workspace",
+        "comments": "[Beginner] ListFile, FetchFile, and PutFile local management",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "b838cb64-b1ab-4025-84ee-8db58adf2b00",
+            "instanceIdentifier": "17ca97c3-e515-4e8c-9f75-0c3efcf90302",
+            "name": "List Incoming Files",
+            "type": "org.apache.nifi.processors.standard.ListFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "Input Directory": "/tmp/nifi_training/incoming",
+              "Recurse Subdirectories": "true"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "30 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "eeae7b7a-a6b3-4d99-8d36-fce9b63b9c83",
+            "instanceIdentifier": "c8cdf2c2-1e5e-42c7-a009-b85d6dc2c83b",
+            "name": "Fetch File Content",
+            "type": "org.apache.nifi.processors.standard.FetchFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "File to Fetch": "${absolute.path}/${filename}",
+              "Completion Strategy": "None"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "not.found",
+              "permission.denied",
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "bec6479d-d22b-4233-85c5-b7ed86ec3527",
+            "instanceIdentifier": "6ef7a9bc-88cb-422c-9110-bab62dcc959a",
+            "name": "Archive Processed File",
+            "type": "org.apache.nifi.processors.standard.PutFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "Directory": "/tmp/nifi_training/processed",
+              "Conflict Resolution Strategy": "replace"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "df494094-f5b3-414e-8c7e-0edb6252288f",
+            "instanceIdentifier": "a735f636-b0fb-4b29-89de-b8be3ae6fdb9",
+            "name": "Log Ingested File",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 600
+            },
+            "properties": {
+              "Log Prefix": "FILE INGESTED"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "83dcff3c-1238-4bb7-877f-9d90976d96d7",
+            "instanceIdentifier": "0bc01f23-9544-4702-84ba-26f7dcbab92c",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "b838cb64-b1ab-4025-84ee-8db58adf2b00",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "List Incoming Files"
+            },
+            "destination": {
+              "id": "eeae7b7a-a6b3-4d99-8d36-fce9b63b9c83",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "Fetch File Content"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "13773fe9-1aee-490a-9228-e616fd8a16b2",
+            "instanceIdentifier": "5206ec99-eba3-4def-8bac-dfb6f1178871",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "eeae7b7a-a6b3-4d99-8d36-fce9b63b9c83",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "Fetch File Content"
+            },
+            "destination": {
+              "id": "bec6479d-d22b-4233-85c5-b7ed86ec3527",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "Archive Processed File"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "9ab1ea84-c904-44de-821e-85eb9c8d6d3e",
+            "instanceIdentifier": "d058a28c-2d6d-467a-bffd-819d12f75637",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "bec6479d-d22b-4233-85c5-b7ed86ec3527",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "Archive Processed File"
+            },
+            "destination": {
+              "id": "df494094-f5b3-414e-8c7e-0edb6252288f",
+              "type": "PROCESSOR",
+              "groupId": "e49aaca1-e78d-401f-9650-d4656bb74577",
+              "name": "Log Ingested File"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

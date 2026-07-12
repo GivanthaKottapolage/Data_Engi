@@ -1,0 +1,171 @@
+{
+  "flowContents": {
+    "identifier": "de310497-4809-4e7b-9960-8039ca0eac5e",
+    "instanceIdentifier": "e4f0fcf9-c264-4bd9-9064-c6e962749114",
+    "name": "Flow 12: Enterprise Performance Tuning",
+    "comments": "[Advanced] Curriculum Lesson: Backpressure configurations and concurrent task limits.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "d5a87f33-89bd-42d4-b3ef-156fc49ab966",
+        "instanceIdentifier": "6d56bb40-7c27-4346-9979-a373541ee21c",
+        "name": "Module 12 Workspace",
+        "comments": "[Advanced] Backpressure configurations and concurrent task limits",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "3e3bf6dc-807d-4f29-a21d-d65cf57552be",
+            "instanceIdentifier": "f20c358d-730e-4e07-a8eb-a1e5f48d684e",
+            "name": "High-Volume Generator",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "Batch Size": "100",
+              "File Size": "1 KB",
+              "Data Format": "Text",
+              "generate-ff-custom-text": "load-test-record"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "522d1eaf-1ff0-42b3-9008-b50162235979",
+            "instanceIdentifier": "de349546-69bb-469a-9814-5b7cd3e08d61",
+            "name": "Consumer (Tune Concurrent Tasks)",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Log Prefix": "CONSUMED"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 4,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "08b646d2-0517-4d18-9e8a-9a6fd9849624",
+            "instanceIdentifier": "53a6b8d0-32e5-426f-a889-bb3fb1e5d493",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "3e3bf6dc-807d-4f29-a21d-d65cf57552be",
+              "type": "PROCESSOR",
+              "groupId": "d5a87f33-89bd-42d4-b3ef-156fc49ab966",
+              "name": "High-Volume Generator"
+            },
+            "destination": {
+              "id": "522d1eaf-1ff0-42b3-9008-b50162235979",
+              "type": "PROCESSOR",
+              "groupId": "d5a87f33-89bd-42d4-b3ef-156fc49ab966",
+              "name": "Consumer (Tune Concurrent Tasks)"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 50,
+            "backPressureDataSizeThreshold": "10 MB",
+            "flowFileExpiration": "30 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

@@ -1,0 +1,243 @@
+{
+  "flowContents": {
+    "identifier": "1a37b16e-ffdf-4e40-966c-7ad13a5c711d",
+    "instanceIdentifier": "0e7b1527-972d-4e05-bc4d-7be0e393ffa1",
+    "name": "Flow 05: HTTP API Integration",
+    "comments": "[Intermediate] Curriculum Lesson: InvokeHTTP interacting with webhook endpoints.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "4a09600b-4178-435d-805a-26d9875b3add",
+        "instanceIdentifier": "e2192932-341e-4a61-b19b-a14614172dba",
+        "name": "Module 05 Workspace",
+        "comments": "[Intermediate] InvokeHTTP interacting with webhook endpoints",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "fad0b7f9-e381-484c-90f0-915e81e1ba42",
+            "instanceIdentifier": "9c618374-8817-41e2-a524-5b692bef4620",
+            "name": "Generate Webhook Payload",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "{\n  \"order_id\": 1001,\n  \"type\": \"DELIVERY\",\n  \"item\": \"Seafood Platter\",\n  \"amount\": 45.5,\n  \"driver_id\": \"D01\"\n}",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "0f97111f-f01b-418d-b2e4-7bff0f78050c",
+            "instanceIdentifier": "5bdd07ef-eae4-4edb-9d3b-0b0fc261c1f0",
+            "name": "Call Webhook Endpoint",
+            "type": "org.apache.nifi.processors.standard.InvokeHTTP",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "HTTP Method": "POST",
+              "Remote URL": "https://httpbin.org/post",
+              "Content-Type": "application/json"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "Original",
+              "Retry",
+              "No Retry",
+              "Failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "8c3faf82-71ce-4a57-bbbd-bc4761c81c00",
+            "instanceIdentifier": "b25a726d-386a-45c0-a962-c42f400d60bd",
+            "name": "Log Webhook Response",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "Log Prefix": "HTTP RESPONSE"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "384890b1-e392-48ef-9073-b0b545d2a340",
+            "instanceIdentifier": "4e6daf73-bf2b-4624-8d5e-eb60caec8340",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "fad0b7f9-e381-484c-90f0-915e81e1ba42",
+              "type": "PROCESSOR",
+              "groupId": "4a09600b-4178-435d-805a-26d9875b3add",
+              "name": "Generate Webhook Payload"
+            },
+            "destination": {
+              "id": "0f97111f-f01b-418d-b2e4-7bff0f78050c",
+              "type": "PROCESSOR",
+              "groupId": "4a09600b-4178-435d-805a-26d9875b3add",
+              "name": "Call Webhook Endpoint"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "515b884c-9c9e-4526-b59b-dd388553f002",
+            "instanceIdentifier": "f31db79c-ee22-4b69-86a3-0dc0860bf31c",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "0f97111f-f01b-418d-b2e4-7bff0f78050c",
+              "type": "PROCESSOR",
+              "groupId": "4a09600b-4178-435d-805a-26d9875b3add",
+              "name": "Call Webhook Endpoint"
+            },
+            "destination": {
+              "id": "8c3faf82-71ce-4a57-bbbd-bc4761c81c00",
+              "type": "PROCESSOR",
+              "groupId": "4a09600b-4178-435d-805a-26d9875b3add",
+              "name": "Log Webhook Response"
+            },
+            "selectedRelationships": [
+              "Response"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

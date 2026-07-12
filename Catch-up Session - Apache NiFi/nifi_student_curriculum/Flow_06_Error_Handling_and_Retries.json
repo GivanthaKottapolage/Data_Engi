@@ -1,0 +1,544 @@
+{
+  "flowContents": {
+    "identifier": "9e74ba91-41a1-4826-81d8-74573b00bd14",
+    "instanceIdentifier": "8c606668-1596-4f48-bcc1-4d356f27e61f",
+    "name": "Flow 06: Error Handling and Retries",
+    "comments": "[Intermediate] Curriculum Lesson: Retry counters, loops, and Dead Letter Queues.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+        "instanceIdentifier": "fc2f5969-01ed-4860-bf1d-e3fe36a0fb51",
+        "name": "Module 06 Workspace",
+        "comments": "[Intermediate] Retry counters, loops, and Dead Letter Queues",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "138d3037-beda-47e0-879f-1bf87f3b05d0",
+            "instanceIdentifier": "bcb7b624-5ee8-4f06-9b7f-577a21673279",
+            "name": "Generate Request",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "{\n  \"order_id\": 1001,\n  \"type\": \"DELIVERY\",\n  \"item\": \"Seafood Platter\",\n  \"amount\": 45.5,\n  \"driver_id\": \"D01\"\n}",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "a85f94e2-e777-407b-9616-b354ee1b6667",
+            "instanceIdentifier": "0767fb56-c369-4914-ba18-e93a3bc08744",
+            "name": "Init Retry Counter",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 150
+            },
+            "properties": {
+              "retryCount": "0"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "7806d64c-1ac1-4a74-8b97-3ea5b18310cb",
+            "instanceIdentifier": "2a7113d7-e185-46c5-a973-94652fad254f",
+            "name": "Call Flaky Endpoint",
+            "type": "org.apache.nifi.processors.standard.InvokeHTTP",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 300
+            },
+            "properties": {
+              "HTTP Method": "GET",
+              "Remote URL": "https://httpbin.org/status/500"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "Original",
+              "No Retry"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "23eb5a2b-9ecb-43d0-8be3-76b9a9818b9b",
+            "instanceIdentifier": "122f1170-fdef-42ad-9a54-cab6745aa30c",
+            "name": "Log Success",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": -250,
+              "y": 500
+            },
+            "properties": {
+              "Log Prefix": "SUCCESS"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "b2c9d830-abf0-4b2e-82ae-43e24408304e",
+            "instanceIdentifier": "bfbf86d7-382f-4998-8156-4505779980ba",
+            "name": "Increment Retry Counter",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 250,
+              "y": 500
+            },
+            "properties": {
+              "retryCount": "${retryCount:plus(1)}"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "1975cfaf-4269-4fe6-9d9c-65727079f749",
+            "instanceIdentifier": "525fc444-6a7d-4703-9a70-0b3e38a6df8b",
+            "name": "Retry Below Limit?",
+            "type": "org.apache.nifi.processors.standard.RouteOnAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 250,
+              "y": 650
+            },
+            "properties": {
+              "Routing Strategy": "Route to Property name",
+              "RETRY": "${retryCount:toNumber():lt(3)}"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "19f788ce-8507-4cda-a691-ebd1434feb19",
+            "instanceIdentifier": "ad1fb4d4-4a1e-4731-82a9-17df48557552",
+            "name": "Dead Letter Queue",
+            "type": "org.apache.nifi.processors.standard.PutFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 500,
+              "y": 800
+            },
+            "properties": {
+              "Directory": "/tmp/nifi_training/dead_letter_queue"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success",
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "0fc38261-e0ef-4d00-ab9f-437f395423ea",
+            "instanceIdentifier": "a701872f-725a-4155-b540-6a07ddcf1cfd",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "138d3037-beda-47e0-879f-1bf87f3b05d0",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Generate Request"
+            },
+            "destination": {
+              "id": "a85f94e2-e777-407b-9616-b354ee1b6667",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Init Retry Counter"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "00603664-e57f-48e6-b72b-c74770208c4a",
+            "instanceIdentifier": "b07f217a-6ead-40cc-9984-353f0f5ddb6f",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "a85f94e2-e777-407b-9616-b354ee1b6667",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Init Retry Counter"
+            },
+            "destination": {
+              "id": "7806d64c-1ac1-4a74-8b97-3ea5b18310cb",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Call Flaky Endpoint"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "f78b6965-2a28-4d7b-b1cf-022af68f4d4e",
+            "instanceIdentifier": "cbaa4fed-5749-4833-b0dd-b68e47c56497",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "7806d64c-1ac1-4a74-8b97-3ea5b18310cb",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Call Flaky Endpoint"
+            },
+            "destination": {
+              "id": "23eb5a2b-9ecb-43d0-8be3-76b9a9818b9b",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Log Success"
+            },
+            "selectedRelationships": [
+              "Response"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "f43eff4c-f45d-41b1-8e67-eee4eb891590",
+            "instanceIdentifier": "3a4e2127-89f2-416a-9ef6-452386a3432c",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "7806d64c-1ac1-4a74-8b97-3ea5b18310cb",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Call Flaky Endpoint"
+            },
+            "destination": {
+              "id": "b2c9d830-abf0-4b2e-82ae-43e24408304e",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Increment Retry Counter"
+            },
+            "selectedRelationships": [
+              "Failure",
+              "Retry"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "5be20002-28eb-4a3a-9d0d-bc7fa714c64a",
+            "instanceIdentifier": "77244a16-e212-4e78-9708-d46c3694d96f",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "b2c9d830-abf0-4b2e-82ae-43e24408304e",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Increment Retry Counter"
+            },
+            "destination": {
+              "id": "1975cfaf-4269-4fe6-9d9c-65727079f749",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Retry Below Limit?"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "0f1d737a-1a41-429c-9fe1-a1245d2f6718",
+            "instanceIdentifier": "974a82fe-265f-4245-a4ea-5415109a1e06",
+            "name": "loop back",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "1975cfaf-4269-4fe6-9d9c-65727079f749",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Retry Below Limit?"
+            },
+            "destination": {
+              "id": "7806d64c-1ac1-4a74-8b97-3ea5b18310cb",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Call Flaky Endpoint"
+            },
+            "selectedRelationships": [
+              "RETRY"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "b8885d63-b552-49f8-ba07-c392bb7af64d",
+            "instanceIdentifier": "f27c4ffe-fbe2-4539-b0e6-72aad4bb8f86",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "1975cfaf-4269-4fe6-9d9c-65727079f749",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Retry Below Limit?"
+            },
+            "destination": {
+              "id": "19f788ce-8507-4cda-a691-ebd1434feb19",
+              "type": "PROCESSOR",
+              "groupId": "93f09ced-9825-47f3-a609-2c2fdd6db5a8",
+              "name": "Dead Letter Queue"
+            },
+            "selectedRelationships": [
+              "unmatched"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

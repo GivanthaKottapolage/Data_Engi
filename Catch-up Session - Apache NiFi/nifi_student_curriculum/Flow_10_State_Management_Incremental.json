@@ -1,0 +1,169 @@
+{
+  "flowContents": {
+    "identifier": "e0bb4359-c5d7-4a49-a26b-44126588965f",
+    "instanceIdentifier": "bf7ed583-bac2-4e5e-9877-508fca65346c",
+    "name": "Flow 10: State Management Incremental",
+    "comments": "[Advanced] Curriculum Lesson: Tracking local state to prevent processing duplicates.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "f6425a0c-8348-4a70-9133-f9cc3de23245",
+        "instanceIdentifier": "03660163-d076-4082-911b-5a57cbb1f55b",
+        "name": "Module 10 Workspace",
+        "comments": "[Advanced] Tracking local state to prevent processing duplicates",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "7dc8f00b-96e2-4c4e-ab11-22af413db171",
+            "instanceIdentifier": "3860aef3-e9bc-4cda-bb9a-d7adf6346972",
+            "name": "List New Files Only",
+            "type": "org.apache.nifi.processors.standard.ListFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "Input Directory": "/tmp/nifi_training/state_incoming",
+              "Minimum File Age": "0 sec"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "15 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "33b5a814-5821-48af-aa11-65be6bf182d1",
+            "instanceIdentifier": "ae23bf1f-449d-4c66-9838-39e7f2094a9f",
+            "name": "Log New File (State Tracked)",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Log Prefix": "NEW FILE"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "fdb87272-95af-4e9e-81ac-b56fed6608b7",
+            "instanceIdentifier": "da8a85e6-b7c6-45e5-a433-8e9f826220b4",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "7dc8f00b-96e2-4c4e-ab11-22af413db171",
+              "type": "PROCESSOR",
+              "groupId": "f6425a0c-8348-4a70-9133-f9cc3de23245",
+              "name": "List New Files Only"
+            },
+            "destination": {
+              "id": "33b5a814-5821-48af-aa11-65be6bf182d1",
+              "type": "PROCESSOR",
+              "groupId": "f6425a0c-8348-4a70-9133-f9cc3de23245",
+              "name": "Log New File (State Tracked)"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}
