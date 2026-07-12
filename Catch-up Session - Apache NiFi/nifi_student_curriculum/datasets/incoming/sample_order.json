@@ -1,0 +1,7 @@
+{
+  "order_id": 1001,
+  "type": "DELIVERY",
+  "item": "Seafood Platter",
+  "amount": 45.5,
+  "driver_id": "D01"
+}

@@ -63,6 +63,10 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 
 More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**.
 
+## Catch-up Sessions
+
+- **[Catch-up Session - Apache NiFi](Catch-up%20Session%20-%20Apache%20NiFi/README.md)** — hands-on data ingestion with Apache NiFi: 12 flows from core routing to enterprise performance tuning, plus sample datasets.
+
 ## Mini Projects
 
 - **[Z2D DWDF Mini Project 01](Z2D%20DWDF%20Mini%20Project%2001/)** — *ABC Hub*: design and build an analytical system from a simulated entertainment-company operational database (27-table dataset + operational schema DDL). Start with the project brief PDF, then follow the [data package README](Z2D%20DWDF%20Mini%20Project%2001/ABC%20Hub%20Data%20Package/packages/README.md) to load the source data.

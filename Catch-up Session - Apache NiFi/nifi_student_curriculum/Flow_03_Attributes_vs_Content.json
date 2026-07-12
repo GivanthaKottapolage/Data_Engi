@@ -1,0 +1,308 @@
+{
+  "flowContents": {
+    "identifier": "623a02b2-5c5d-4dcc-a101-aebd8bf10812",
+    "instanceIdentifier": "a1788dea-e31a-4b23-8a9f-e675a653bc2b",
+    "name": "Flow 03: Attributes vs Content",
+    "comments": "[Beginner] Curriculum Lesson: EvaluateJsonPath and NiFi Expression Language.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+        "instanceIdentifier": "418fe894-2bb3-428c-956a-eb5e3167d3fc",
+        "name": "Module 03 Workspace",
+        "comments": "[Beginner] EvaluateJsonPath and NiFi Expression Language",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "453dba29-3a55-46d4-8c7f-b29367edce79",
+            "instanceIdentifier": "be490638-0c25-4817-b145-350b5a44ecc3",
+            "name": "Generate Order JSON",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "{\n  \"order_id\": 1001,\n  \"type\": \"DELIVERY\",\n  \"item\": \"Seafood Platter\",\n  \"amount\": 45.5,\n  \"driver_id\": \"D01\"\n}",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "794bad6c-6023-4978-9937-b68c74bfd800",
+            "instanceIdentifier": "1d0cfb6c-8bd8-44df-8726-b61b6a008b60",
+            "name": "Promote Content to Attributes",
+            "type": "org.apache.nifi.processors.standard.EvaluateJsonPath",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Destination": "flowfile-attribute",
+              "order_id": "$.order_id",
+              "amount": "$.amount"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "unmatched"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "4922b2dd-3f8a-4663-9402-4da9f1f0070d",
+            "instanceIdentifier": "70a58916-77f8-47af-8082-02ea75d9e3d3",
+            "name": "Compute Total With Tax (EL)",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "amount_with_tax": "${amount:toNumber():multiply(1.08):format('#0.00')}"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "68f49b38-0233-4da1-82cf-f825a47b49a5",
+            "instanceIdentifier": "77bb9b12-1afc-4094-a5bf-08287575493d",
+            "name": "Log Attributes vs Content",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 600
+            },
+            "properties": {
+              "Log Prefix": "ATTRS-VS-CONTENT",
+              "Attributes to Log Regex": ".*"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "b3da651b-1b75-4eec-9529-52eb45794079",
+            "instanceIdentifier": "d8655594-3c7f-4034-a7fa-40208dee9e97",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "453dba29-3a55-46d4-8c7f-b29367edce79",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Generate Order JSON"
+            },
+            "destination": {
+              "id": "794bad6c-6023-4978-9937-b68c74bfd800",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Promote Content to Attributes"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "523202b0-4095-4292-8b29-b803749f2796",
+            "instanceIdentifier": "3fd27fb6-031c-45d5-b32d-250cff2e178a",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "794bad6c-6023-4978-9937-b68c74bfd800",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Promote Content to Attributes"
+            },
+            "destination": {
+              "id": "4922b2dd-3f8a-4663-9402-4da9f1f0070d",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Compute Total With Tax (EL)"
+            },
+            "selectedRelationships": [
+              "matched"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "90062045-52d4-455e-ae2d-b1ba74da3e67",
+            "instanceIdentifier": "173ab38a-ed1f-45b4-8757-1628368e8438",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "4922b2dd-3f8a-4663-9402-4da9f1f0070d",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Compute Total With Tax (EL)"
+            },
+            "destination": {
+              "id": "68f49b38-0233-4da1-82cf-f825a47b49a5",
+              "type": "PROCESSOR",
+              "groupId": "4b449d02-67d0-4363-ad4f-3c9978bd148c",
+              "name": "Log Attributes vs Content"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

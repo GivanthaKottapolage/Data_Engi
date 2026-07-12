@@ -1,0 +1,354 @@
+{
+  "flowContents": {
+    "identifier": "71f23151-6db2-4d0c-ac27-ba42c56ad37a",
+    "instanceIdentifier": "b89c9297-0b6e-4c0d-b668-6e56b08b64b1",
+    "name": "Flow 07: Split and Merge Records",
+    "comments": "[Intermediate] Curriculum Lesson: SplitRecord and MergeRecord batching dynamics.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+        "instanceIdentifier": "3cca35ca-f058-4354-9fb7-492dc96c7fec",
+        "name": "Module 07 Workspace",
+        "comments": "[Intermediate] SplitRecord and MergeRecord batching dynamics",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "4c15ffbc-4850-4330-8e5d-c32a8e17d204",
+            "instanceIdentifier": "1b10263c-8b1a-4040-8d69-415375685403",
+            "name": "Generate Orders Batch",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "[\n  {\n    \"order_id\": 1001,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Seafood Platter\",\n    \"amount\": 45.5,\n    \"driver_id\": \"D01\"\n  },\n  {\n    \"order_id\": 1002,\n    \"type\": \"PICKUP\",\n    \"item\": \"Margherita Pizza\",\n    \"amount\": 18.0,\n    \"driver_id\": \"D02\"\n  },\n  {\n    \"order_id\": 1003,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Sushi Combo\",\n    \"amount\": 32.75,\n    \"driver_id\": \"D03\"\n  },\n  {\n    \"order_id\": 1004,\n    \"type\": \"DELIVERY\",\n    \"item\": \"Burger Meal\",\n    \"amount\": 15.25,\n    \"driver_id\": \"D01\"\n  },\n  {\n    \"order_id\": 1005,\n    \"type\": \"PICKUP\",\n    \"item\": \"Pad Thai\",\n    \"amount\": 21.9,\n    \"driver_id\": \"D02\"\n  }\n]",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "02824736-0ef7-4eac-9b15-ea57143972af",
+            "instanceIdentifier": "de43af62-1a30-4486-ac9a-5a845f2ea04d",
+            "name": "Split Into Single Records",
+            "type": "org.apache.nifi.processors.standard.SplitRecord",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Record Reader": "3a7836a9-f676-4eb5-8fd8-95bd70291d20",
+              "Record Writer": "b56d2c5c-3ad7-47c5-b43d-64b232740ade",
+              "Records Per Split": "1"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "original",
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "f994504a-89d9-4650-9965-af34d62e1979",
+            "instanceIdentifier": "b5d26acb-4b11-4904-9f41-71ec71b7b8a5",
+            "name": "Re-batch Into Groups of 3",
+            "type": "org.apache.nifi.processors.standard.MergeRecord",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "Record Reader": "3a7836a9-f676-4eb5-8fd8-95bd70291d20",
+              "Record Writer": "b56d2c5c-3ad7-47c5-b43d-64b232740ade",
+              "Minimum Number of Records": "3",
+              "Maximum Number of Records": "10",
+              "Max Bin Age": "10 sec"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "original",
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "bd9f139e-0370-4f28-ad14-cdebdbafc59e",
+            "instanceIdentifier": "b986e0ac-6e95-4d93-8d60-bcbf88c9850a",
+            "name": "Log Merged Batch",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 600
+            },
+            "properties": {
+              "Log Prefix": "MERGED BATCH"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "merged"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "0056c6ea-b70b-48b1-afda-6c625a125d91",
+            "instanceIdentifier": "22712eb0-16bb-4a3c-802d-cae2bcb484ab",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "4c15ffbc-4850-4330-8e5d-c32a8e17d204",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Generate Orders Batch"
+            },
+            "destination": {
+              "id": "02824736-0ef7-4eac-9b15-ea57143972af",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Split Into Single Records"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "b00c0fb3-1f31-4d9c-9312-a97d311023a1",
+            "instanceIdentifier": "e2109855-2892-48b2-a32e-5623ca24c2c9",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "02824736-0ef7-4eac-9b15-ea57143972af",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Split Into Single Records"
+            },
+            "destination": {
+              "id": "f994504a-89d9-4650-9965-af34d62e1979",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Re-batch Into Groups of 3"
+            },
+            "selectedRelationships": [
+              "splits"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "ec8caf24-5738-4f48-ae78-7dd6f938c031",
+            "instanceIdentifier": "5341b655-a787-43d9-ba45-ef4ecaaeb662",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "f994504a-89d9-4650-9965-af34d62e1979",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Re-batch Into Groups of 3"
+            },
+            "destination": {
+              "id": "bd9f139e-0370-4f28-ad14-cdebdbafc59e",
+              "type": "PROCESSOR",
+              "groupId": "eeadf94c-caf3-4ca7-baf2-047e6ab8f341",
+              "name": "Log Merged Batch"
+            },
+            "selectedRelationships": [
+              "merged"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [
+          {
+            "identifier": "3a7836a9-f676-4eb5-8fd8-95bd70291d20",
+            "instanceIdentifier": "7ab47a16-9d48-458d-ae97-2b0b23ad9ef9",
+            "name": "JSON Reader (Infer Schema)",
+            "type": "org.apache.nifi.json.JsonTreeReader",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-record-serialization-services-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "CONTROLLER_SERVICE",
+            "properties": {
+              "Schema Access Strategy": "Infer Schema"
+            },
+            "propertyDescriptors": {},
+            "controllerServiceApis": [],
+            "bulletinLevel": "WARN",
+            "scheduledState": "ENABLED"
+          },
+          {
+            "identifier": "b56d2c5c-3ad7-47c5-b43d-64b232740ade",
+            "instanceIdentifier": "e35c222f-9dba-4958-89ec-ddcc1682541b",
+            "name": "JSON Writer",
+            "type": "org.apache.nifi.json.JsonRecordSetWriter",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-record-serialization-services-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "CONTROLLER_SERVICE",
+            "properties": {
+              "Schema Write Strategy": "Do Not Write Schema"
+            },
+            "propertyDescriptors": {},
+            "controllerServiceApis": [],
+            "bulletinLevel": "WARN",
+            "scheduledState": "ENABLED"
+          }
+        ],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}

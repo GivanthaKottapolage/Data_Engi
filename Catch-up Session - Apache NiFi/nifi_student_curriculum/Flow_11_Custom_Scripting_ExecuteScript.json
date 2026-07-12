@@ -1,0 +1,240 @@
+{
+  "flowContents": {
+    "identifier": "2ffae673-430f-49ba-bf63-b94c81d868ca",
+    "instanceIdentifier": "85a8eefe-12ab-4802-8b1c-0c2ee0dec27f",
+    "name": "Flow 11: Custom Scripting ExecuteScript",
+    "comments": "[Advanced] Curriculum Lesson: Custom Groovy script for distance calculations.",
+    "componentType": "PROCESS_GROUP",
+    "position": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "processGroups": [
+      {
+        "identifier": "bd96b326-6e65-454c-bd71-54488a522ab8",
+        "instanceIdentifier": "0ab82f9e-9c85-4a83-b7c9-f137b08a55ce",
+        "name": "Module 11 Workspace",
+        "comments": "[Advanced] Custom Groovy script for distance calculations",
+        "componentType": "PROCESS_GROUP",
+        "position": {
+          "x": 500.0,
+          "y": 200.0
+        },
+        "processors": [
+          {
+            "identifier": "9ab1ef7b-a262-4a2e-b454-c5edd1aec2c2",
+            "instanceIdentifier": "6ccca9be-1994-41a5-b054-11dcc356b21c",
+            "name": "Generate Coordinate Pair",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "properties": {
+              "generate-ff-custom-text": "{\n  \"origin\": \"Kurunegala Branch\",\n  \"lat1\": 7.4863,\n  \"lon1\": 80.3647,\n  \"destination\": \"Customer Address\",\n  \"lat2\": 6.9271,\n  \"lon2\": 79.8612\n}",
+              "Data Format": "Text"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "1a09791d-9b2f-4eb2-af56-05ceda3c7e66",
+            "instanceIdentifier": "b67f6808-b152-4569-a6e2-0b66c5515aa8",
+            "name": "Calculate Distance (Groovy)",
+            "type": "org.apache.nifi.processors.script.ExecuteScript",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-scripting-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 200
+            },
+            "properties": {
+              "Script Engine": "Groovy",
+              "Script Body": "import groovy.json.JsonSlurper\nimport groovy.json.JsonOutput\nimport java.nio.charset.StandardCharsets\n\ndef flowFile = session.get()\nif (!flowFile) return\n\ndef text = new String(flowFile.read().getBytes(), StandardCharsets.UTF_8)\ndef json = new JsonSlurper().parseText(text)\n\ndouble lat1 = json.lat1, lon1 = json.lon1\ndouble lat2 = json.lat2, lon2 = json.lon2\ndouble R = 6371.0\n\ndouble dLat = Math.toRadians(lat2 - lat1)\ndouble dLon = Math.toRadians(lon2 - lon1)\ndouble a = Math.sin(dLat / 2) ** 2 +\n        Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) * Math.sin(dLon / 2) ** 2\ndouble c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))\ndouble distanceKm = R * c\n\nflowFile = session.putAttribute(flowFile, 'distance_km', String.format('%.2f', distanceKm))\nsession.transfer(flowFile, REL_SUCCESS)\n"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "failure"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          },
+          {
+            "identifier": "af5ceb1b-2c2a-4e8f-8d17-d604749137b4",
+            "instanceIdentifier": "3b98574f-a763-47d0-8480-f6b52fd75fa3",
+            "name": "Log Distance Result",
+            "type": "org.apache.nifi.processors.standard.LogAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "2.10.0"
+            },
+            "componentType": "PROCESSOR",
+            "position": {
+              "x": 0,
+              "y": 400
+            },
+            "properties": {
+              "Log Prefix": "DISTANCE",
+              "Attributes to Log Regex": "distance_km"
+            },
+            "propertyDescriptors": {},
+            "style": {},
+            "schedulingPeriod": "0 sec",
+            "schedulingStrategy": "TIMER_DRIVEN",
+            "executionNode": "ALL",
+            "penaltyDuration": "30 sec",
+            "yieldDuration": "1 sec",
+            "bulletinLevel": "WARN",
+            "runDurationMillis": 0,
+            "concurrentlySchedulableTaskCount": 1,
+            "autoTerminatedRelationships": [
+              "success"
+            ],
+            "retryCount": 10,
+            "retriedRelationships": [],
+            "backoffMechanism": "PENALIZE_FLOWFILE",
+            "maxBackoffPeriod": "10 mins",
+            "scheduledState": "ENABLED",
+            "annotationData": ""
+          }
+        ],
+        "connections": [
+          {
+            "identifier": "31e92cca-b47b-4703-9881-663bff8b530d",
+            "instanceIdentifier": "4b31b6c6-55de-4fda-a965-2f165779d085",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "9ab1ef7b-a262-4a2e-b454-c5edd1aec2c2",
+              "type": "PROCESSOR",
+              "groupId": "bd96b326-6e65-454c-bd71-54488a522ab8",
+              "name": "Generate Coordinate Pair"
+            },
+            "destination": {
+              "id": "1a09791d-9b2f-4eb2-af56-05ceda3c7e66",
+              "type": "PROCESSOR",
+              "groupId": "bd96b326-6e65-454c-bd71-54488a522ab8",
+              "name": "Calculate Distance (Groovy)"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          },
+          {
+            "identifier": "00756d62-b0a9-4161-b412-00103c07b3a5",
+            "instanceIdentifier": "a11f95fe-51d8-4088-b1a5-defb47182c1e",
+            "name": "",
+            "componentType": "CONNECTION",
+            "source": {
+              "id": "1a09791d-9b2f-4eb2-af56-05ceda3c7e66",
+              "type": "PROCESSOR",
+              "groupId": "bd96b326-6e65-454c-bd71-54488a522ab8",
+              "name": "Calculate Distance (Groovy)"
+            },
+            "destination": {
+              "id": "af5ceb1b-2c2a-4e8f-8d17-d604749137b4",
+              "type": "PROCESSOR",
+              "groupId": "bd96b326-6e65-454c-bd71-54488a522ab8",
+              "name": "Log Distance Result"
+            },
+            "selectedRelationships": [
+              "success"
+            ],
+            "bends": [],
+            "labelIndex": 1,
+            "zIndex": 0,
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+            "loadBalanceCompression": "DO_NOT_COMPRESS",
+            "partitioningAttribute": ""
+          }
+        ],
+        "controllerServices": [],
+        "processGroups": [],
+        "inputPorts": [],
+        "outputPorts": [],
+        "labels": [],
+        "funnels": [],
+        "remoteProcessGroups": [],
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "defaultFlowFileExpiration": "0 sec",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "logFileSuffix": "",
+        "scheduledState": "ENABLED"
+      }
+    ],
+    "processors": [],
+    "connections": [],
+    "controllerServices": [],
+    "inputPorts": [],
+    "outputPorts": [],
+    "labels": [],
+    "funnels": [],
+    "remoteProcessGroups": [],
+    "flowFileConcurrency": "UNBOUNDED",
+    "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+    "defaultFlowFileExpiration": "0 sec",
+    "defaultBackPressureObjectThreshold": 10000,
+    "defaultBackPressureDataSizeThreshold": "1 GB",
+    "logFileSuffix": "",
+    "scheduledState": "ENABLED"
+  },
+  "externalControllerServiceReferences": {},
+  "parameterContexts": {},
+  "parameterProviders": {},
+  "flowEncodingVersion": "2.0"
+}
