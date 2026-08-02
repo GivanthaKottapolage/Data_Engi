@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Airflow runtime
+logs/
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+standalone_admin_password.txt
+
+# Editors
+.idea/
+.vscode/
+
+# OS junk
+.DS_Store
+__MACOSX/
+Thumbs.db

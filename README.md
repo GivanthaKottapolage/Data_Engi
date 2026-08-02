@@ -55,13 +55,19 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 ├── Week 03/                  Basic Python ETL: OLTP → OLAP
 │   ├── README.md             Basic Python ETL demo guide
 │   └── basic_etl/            ETL scripts (config, db, main) + sql/ models
-└── Week 04/                  Star schema: building facts & dimensions
+├── Week 04/                  Star schema: building facts & dimensions
+│   ├── README.md             Week guide
+│   ├── fact_and_dim.sql      Schema (DDL): dimension + fact tables
+│   └── ingest_dim_and_fact.sql  Load (DML): populate dims & facts
+└── Week 07/                  Airflow orchestration, Bronze layer & SCDs
     ├── README.md             Week guide
-    ├── fact_and_dim.sql      Schema (DDL): dimension + fact tables
-    └── ingest_dim_and_fact.sql  Load (DML): populate dims & facts
+    ├── bronze_layer.sql      Bronze (DDL): 13 landing tables
+    ├── SCD.sql               SCD Type 0–4 dimension designs
+    └── banking-airflow/      Airflow project
+        └── dags/             DAGs + sql/bronze extracts + utils helpers
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**, then **[Week 07](Week%2007/README.md)**.
 
 ## Catch-up Sessions
 
