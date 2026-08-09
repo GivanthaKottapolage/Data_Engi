@@ -65,7 +65,12 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 │   ├── SCD.sql               SCD Type 0–4 dimension designs
 │   └── banking-airflow/      Airflow project
 │       └── dags/             DAGs + sql/bronze extracts + utils helpers
-└── Week 08/                  Tracking change over time: SCD from two extracts
+└── Week 08/                  Medallion layers, SCDs & incremental loads
+    ├── bank_oltp_new.sql     Source (OLTP) schema, now with audit columns
+    ├── bronze_layer_medallion.sql  Bronze (DDL): raw landing tables
+    ├── silver_layer_medallion.sql  Silver (DDL): cleaned & conformed tables
+    ├── banking-airflow/      Airflow project
+    │   └── dags/             Full-load, incremental & silver DAGs + sql/ + utils/
     └── xyz_bank_scd_student/ XYZ Bank core banking extract, one month apart
         ├── README.md         Dataset guide: tables, row counts, load order
         ├── day1_extract/     System state as of 01 June 2025 (13 CSVs)
