@@ -59,15 +59,20 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 │   ├── README.md             Week guide
 │   ├── fact_and_dim.sql      Schema (DDL): dimension + fact tables
 │   └── ingest_dim_and_fact.sql  Load (DML): populate dims & facts
-└── Week 07/                  Airflow orchestration, Bronze layer & SCDs
-    ├── README.md             Week guide
-    ├── bronze_layer.sql      Bronze (DDL): 13 landing tables
-    ├── SCD.sql               SCD Type 0–4 dimension designs
-    └── banking-airflow/      Airflow project
-        └── dags/             DAGs + sql/bronze extracts + utils helpers
+├── Week 07/                  Airflow orchestration, Bronze layer & SCDs
+│   ├── README.md             Week guide
+│   ├── bronze_layer.sql      Bronze (DDL): 13 landing tables
+│   ├── SCD.sql               SCD Type 0–4 dimension designs
+│   └── banking-airflow/      Airflow project
+│       └── dags/             DAGs + sql/bronze extracts + utils helpers
+└── Week 08/                  Tracking change over time: SCD from two extracts
+    └── xyz_bank_scd_student/ XYZ Bank core banking extract, one month apart
+        ├── README.md         Dataset guide: tables, row counts, load order
+        ├── day1_extract/     System state as of 01 June 2025 (13 CSVs)
+        └── day2_extract/     System state as of 01 July 2025 (13 CSVs)
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**, then **[Week 07](Week%2007/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**, then **[Week 07](Week%2007/README.md)**, then **[Week 08](Week%2008/xyz_bank_scd_student/README.md)**.
 
 ## Catch-up Sessions
 
