@@ -86,6 +86,7 @@ More weeks are added here as the bootcamp progresses. Start with **[Week 01](Wee
 ## Mini Projects
 
 - **[Z2D DWDF Mini Project 01](Z2D%20DWDF%20Mini%20Project%2001/)** — *ABC Hub*: design and build an analytical system from a simulated entertainment-company operational database (27-table dataset + operational schema DDL). Start with the project brief PDF, then follow the [data package README](Z2D%20DWDF%20Mini%20Project%2001/ABC%20Hub%20Data%20Package/packages/README.md) to load the source data.
+- **[Z2D DWDF Mini Project 02](Z2D%20DWDF%20Mini%20Project%2002/)** — *ABC Hub: Evolving the Data Platform*: a direct continuation of Mini Project 01 — keep the same business scenario, data model and database design, and grow them into a production-ready platform. Covers Airflow fundamentals, an evidence-based NiFi vs Airflow decision, Medallion architecture, SCDs, and incremental, idempotent processing with retries and backfill. Brief only — build on your Mini Project 01 solution and reuse its data package.
 
 ---
 
