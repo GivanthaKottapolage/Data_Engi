@@ -18,55 +18,75 @@ CREATE SCHEMA public;
 CREATE TABLE country (
     country_id      BIGINT PRIMARY KEY,
     country_name    VARCHAR(100) NOT NULL,
-    country_code    VARCHAR(5)   NOT NULL
+    country_code    VARCHAR(5)   NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE city (
     city_id         BIGINT PRIMARY KEY,
     country_id      BIGINT NOT NULL REFERENCES country(country_id),
-    city_name       VARCHAR(100) NOT NULL
+    city_name       VARCHAR(100) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE content_type (
     content_type_id BIGINT PRIMARY KEY,
-    content_type    VARCHAR(50) NOT NULL
+    content_type    VARCHAR(50) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE genre (
     genre_id        BIGINT PRIMARY KEY,
-    genre_name      VARCHAR(50) NOT NULL
+    genre_name      VARCHAR(50) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE artist (
     artist_id       BIGINT PRIMARY KEY,
     artist_name     VARCHAR(150) NOT NULL,
-    country         VARCHAR(100)
+    country         VARCHAR(100),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE device (
     device_id       BIGINT PRIMARY KEY,
-    device_name     VARCHAR(50) NOT NULL
+    device_name     VARCHAR(50) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE payment_method (
     payment_method_id BIGINT PRIMARY KEY,
-    method_name       VARCHAR(50) NOT NULL
+    method_name       VARCHAR(50) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE support_category (
     category_id     BIGINT PRIMARY KEY,
-    category_name   VARCHAR(100) NOT NULL
+    category_name   VARCHAR(100) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE courier (
     courier_id      BIGINT PRIMARY KEY,
-    courier_name    VARCHAR(100) NOT NULL
+    courier_name    VARCHAR(100) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE warehouse (
     warehouse_id    BIGINT PRIMARY KEY,
     city_id         BIGINT NOT NULL REFERENCES city(city_id),
-    warehouse_name  VARCHAR(150) NOT NULL
+    warehouse_name  VARCHAR(150) NOT NULL,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE subscription_plan (
@@ -74,7 +94,9 @@ CREATE TABLE subscription_plan (
     plan_name       VARCHAR(50) NOT NULL,
     monthly_fee     DECIMAL(10,2) NOT NULL,
     video_quality   VARCHAR(20),
-    max_devices     INT
+    max_devices     INT,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
@@ -91,7 +113,9 @@ CREATE TABLE customer (
     date_of_birth     DATE,
     gender            VARCHAR(20),
     registration_date DATE,
-    status            VARCHAR(20)
+    status            VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE customer_address (
@@ -100,7 +124,9 @@ CREATE TABLE customer_address (
     city_id         BIGINT NOT NULL REFERENCES city(city_id),
     address_line    VARCHAR(255),
     postal_code     VARCHAR(20),
-    address_type    VARCHAR(20)
+    address_type    VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE customer_subscription (
@@ -110,7 +136,9 @@ CREATE TABLE customer_subscription (
     start_date      DATE,
     end_date        DATE,
     status          VARCHAR(20),
-    auto_renew      BOOLEAN
+    auto_renew      BOOLEAN,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
@@ -124,12 +152,16 @@ CREATE TABLE content (
     release_date     DATE,
     duration_minutes INT,
     language         VARCHAR(50),
-    age_rating       VARCHAR(10)
+    age_rating       VARCHAR(10),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE content_genre (
     content_id      BIGINT NOT NULL REFERENCES content(content_id),
     genre_id        BIGINT NOT NULL REFERENCES genre(genre_id),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL,
     PRIMARY KEY (content_id, genre_id)
 );
 
@@ -137,6 +169,8 @@ CREATE TABLE content_artist (
     content_id      BIGINT NOT NULL REFERENCES content(content_id),
     artist_id       BIGINT NOT NULL REFERENCES artist(artist_id),
     role            VARCHAR(50),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL,
     PRIMARY KEY (content_id, artist_id)
 );
 
@@ -152,7 +186,9 @@ CREATE TABLE streaming_session (
     start_time           TIMESTAMP,
     end_time             TIMESTAMP,
     watch_duration       INT,
-    completion_percentage DECIMAL(5,2)
+    completion_percentage DECIMAL(5,2),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
@@ -166,7 +202,9 @@ CREATE TABLE inventory_item (
     barcode         VARCHAR(50),
     purchase_date   DATE,
     item_condition  VARCHAR(20),
-    status          VARCHAR(20)
+    status          VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE rental (
@@ -178,7 +216,9 @@ CREATE TABLE rental (
     return_date     DATE,
     rental_fee      DECIMAL(10,2),
     late_fee        DECIMAL(10,2),
-    status          VARCHAR(20)
+    status          VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE delivery (
@@ -188,7 +228,9 @@ CREATE TABLE delivery (
     dispatch_date   TIMESTAMP,
     delivered_date  TIMESTAMP,
     returned_date   TIMESTAMP,
-    delivery_status VARCHAR(20)
+    delivery_status VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
@@ -204,7 +246,9 @@ CREATE TABLE payment (
     amount            DECIMAL(10,2),
     payment_date      TIMESTAMP,
     payment_type      VARCHAR(20),
-    status            VARCHAR(20)
+    status            VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
@@ -217,14 +261,18 @@ CREATE TABLE review (
     content_id      BIGINT NOT NULL REFERENCES content(content_id),
     rating          INT,
     review_text     VARCHAR(500),
-    review_date     TIMESTAMP
+    review_date     TIMESTAMP,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE wishlist (
     wishlist_id     BIGINT PRIMARY KEY,
     customer_id     BIGINT NOT NULL REFERENCES customer(customer_id),
     content_id      BIGINT NOT NULL REFERENCES content(content_id),
-    added_date      TIMESTAMP
+    added_date      TIMESTAMP,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE support_ticket (
@@ -234,7 +282,9 @@ CREATE TABLE support_ticket (
     opened_date     TIMESTAMP,
     closed_date     TIMESTAMP,
     priority        VARCHAR(20),
-    status          VARCHAR(20)
+    status          VARCHAR(20),
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 CREATE TABLE recommendation (
@@ -243,7 +293,9 @@ CREATE TABLE recommendation (
     content_id          BIGINT NOT NULL REFERENCES content(content_id),
     recommendation_date TIMESTAMP,
     algorithm_version   VARCHAR(20),
-    clicked             BOOLEAN
+    clicked             BOOLEAN,
+    created_at      TIMESTAMP NOT NULL,
+    updated_at      TIMESTAMP NOT NULL
 );
 
 -- ----------------------------------------------------------------------------
