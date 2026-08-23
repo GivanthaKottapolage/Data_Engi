@@ -1,0 +1,8 @@
+# The PulseTrack raw extracts are distributed exactly as the generator
+# produced them and as the QA scripts validated them. The CSVs are
+# uniformly CRLF and the JSONL/stream files uniformly LF; git's autocrlf
+# handling would rewrite the CSVs to LF on commit. Mark the raw source
+# files as non-text so their bytes survive the round trip untouched.
+DE01Capstone/data/*.csv     -text
+DE01Capstone/mongo/*.jsonl  -text
+DE01Capstone/stream/*.log   -text
