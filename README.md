@@ -65,19 +65,28 @@ We teach **WHY** a technology exists, **HOW** it solves real problems, and **WHE
 │   ├── SCD.sql               SCD Type 0–4 dimension designs
 │   └── banking-airflow/      Airflow project
 │       └── dags/             DAGs + sql/bronze extracts + utils helpers
-└── Week 08/                  Medallion layers, SCDs & incremental loads
-    ├── bank_oltp_new.sql     Source (OLTP) schema, now with audit columns
-    ├── bronze_layer_medallion.sql  Bronze (DDL): raw landing tables
-    ├── silver_layer_medallion.sql  Silver (DDL): cleaned & conformed tables
-    ├── banking-airflow/      Airflow project
-    │   └── dags/             Full-load, incremental & silver DAGs + sql/ + utils/
-    └── xyz_bank_scd_student/ XYZ Bank core banking extract, one month apart
-        ├── README.md         Dataset guide: tables, row counts, load order
-        ├── day1_extract/     System state as of 01 June 2025 (13 CSVs)
-        └── day2_extract/     System state as of 01 July 2025 (13 CSVs)
+├── Week 08/                  Medallion layers, SCDs & incremental loads
+│   ├── bank_oltp_new.sql     Source (OLTP) schema, now with audit columns
+│   ├── bronze_layer_medallion.sql  Bronze (DDL): raw landing tables
+│   ├── silver_layer_medallion.sql  Silver (DDL): cleaned & conformed tables
+│   ├── banking-airflow/      Airflow project
+│   │   └── dags/             Full-load, incremental & silver DAGs + sql/ + utils/
+│   └── xyz_bank_scd_student/ XYZ Bank core banking extract, one month apart
+│       ├── README.md         Dataset guide: tables, row counts, load order
+│       ├── day1_extract/     System state as of 01 June 2025 (13 CSVs)
+│       └── day2_extract/     System state as of 01 July 2025 (13 CSVs)
+└── Week 10/                  Airflow 3.x patterns & the OLAP cube
+    ├── gold_facts_layer.sql  gold.fact_transaction (DDL)
+    ├── transaction_olap_cube.sql  gold.transaction_olap_cube (materialized view)
+    └── airflow3_data_engineering_examples/  20 progressive Airflow 3.x DAGs
+        ├── README.md         What each DAG demonstrates
+        ├── AIRFLOW3_AI_THEORY.md  AI/LLM operators in Airflow 3
+        ├── dags/             01–15 core patterns, 16–20 AI/LLM operators
+        ├── scripts/          Helper scripts used by the DAGs
+        └── requirements.txt  Airflow 3.3 + provider pins
 ```
 
-More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**, then **[Week 07](Week%2007/README.md)**, then **[Week 08](Week%2008/xyz_bank_scd_student/README.md)**.
+More weeks are added here as the bootcamp progresses. Start with **[Week 01](Week%2001/README.md)**, then **[Week 02](Week%2002/README.md)**, then **[Week 03](Week%2003/README.md)**, then **[Week 04](Week%2004/README.md)**, then **[Week 07](Week%2007/README.md)**, then **[Week 08](Week%2008/xyz_bank_scd_student/README.md)**, then **[Week 10](Week%2010/airflow3_data_engineering_examples/README.md)**.
 
 ## Catch-up Sessions
 

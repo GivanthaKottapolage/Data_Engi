@@ -1,0 +1,8 @@
+For a real Airflow 3.x environment, install the matching provider packages and configure:
+- warehouse connection: `warehouse`
+- HTTP connection: `external_api`
+- filesystem path used by FileSensor
+- Kubernetes namespace/image for DAG 11
+- S3 access/provider configuration for DAG 12/15
+
+These examples are intentionally educational; validate provider versions and environment-specific parameters against your deployed Airflow 3.x version.
