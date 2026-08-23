@@ -1,0 +1,26 @@
+am_id,am_name,team,region,hire_date,created_at,updated_at
+AM001,Yuki Brown,Growth,Central,2025-02-17 13:16:43,17-02-2025,2025-02-18
+AM002,Linda Jones,Growth,East,04/25/2025,2025-04-25 15:53:40,
+AM003,Chen Johnson,Growth,East,2025-02-12,1739357736,15-02-2025
+AM004,Linda Kumar,Growth,West,20-05-2025,2025-05-20 00:53:35,22-05-2025
+AM005,Yuki Haddad,SMB,West,2025-03-29 05:27:57,03/29/2025,29-03-2025
+AM006,Nadia Rodriguez,Growth,West,2025-05-16,16-05-2025,05/19/2025
+AM007,Chen Hernandez,Enterprise,West,11-02-2025,02/11/2025,2025-02-14
+AM008,Emma Hernandez,Growth,East,1742063722,"Mar 15, 2025",03/17/2025
+AM009,Patricia Lopez,Enterprise,Central,06-06-2025,,1749313765
+AM010,Mary Rossi,SMB,East,2025-06-29 02:12:28,06/29/2025,06/30/2025
+AM011,Wei Williams,Enterprise,Central,2025-04-23 02:39:21,04/23/2025,24-04-2025
+AM012,Michael Haddad,Growth,East,2025-05-09 09:42:37,"May 09, 2025",05/12/2025
+AM013,,Enterprise,East,06/16/2025,06/16/2025,2025-06-16
+AM014,Linda Brown,SMB,Central,2025-03-30 01:02:42,2025-03-30 01:02:42,2025-03-31
+AM015,Yuki Young,Enterprise,West,2025-03-13 21:10:06,13-03-2025,03/14/2025
+AM016,Arjun Miller,Enterprise,East,"Apr 29, 2025",2025-04-29,30-04-2025
+AM017,Yuki Garcia,Retention,West,2025-03-31 18:17:19,2025-03-31,"Apr 02, 2025"
+AM018,Wei Rodriguez,Retention,Central,2025-06-13 15:58:28,06/13/2025,"Jun 13, 2025"
+AM019,Emma Muller,Growth,West,2025-06-09 13:52:39,2025-06-09,06/11/2025
+AM020,Mary Walker,Enterprise,EMEA,2025-02-21,2025-02-21,2025-02-24
+AM021,John Miller,Enterprise,West,2025-05-08,2025-05-08 06:33:56,2025-05-09 12:33:56
+AM022,Diego Gonzalez,SMB,West,21-02-2025,21-02-2025,2025-02-22
+AM023,Robert Davis,Enterprise,EMEA,2025-06-24 08:09:28,2025-06-24 08:09:28,"Jun 26, 2025"
+AM024,Nadia Gonzalez,Enterprise,West,27-01-2025,1738010421,2025-01-29 02:40:21
+AM025,Aisha Patel,Growth,East,,,19-06-2025

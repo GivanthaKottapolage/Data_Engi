@@ -1,0 +1,601 @@
+partner_id,partner_name,channel,media_buyer,join_date,payment_terms,created_at,updated_at
+22240,Performance Solutions,display,Linda Walker,1742371291,Net 45,2025-03-19 08:01:31,1742457691
+13201,Media Labs,Email,Ken Muller,2025-01-29 06:48:29,Net 60,2025-01-29 06:48:29,2025-01-29 17:48:29
+64321,Performance Solutions,Video,Wei Patel,,Net 45,"Jun 05, 2025",1749250924
+29342,Media Collective,search,Emma Wilson,1743032690,Net 45,2025-03-26,1743119090
+77889,Growth Partners, Native ,Linda Brown,06/27/2025,Net 45,06/27/2025,06/29/2025
+70901,Click Collective,email,Ken Young,07-10-2025,weekly,2025-10-07,09-10-2025
+65933,Growth Labs,Video,,2025-06-24,Net 15,2025-06-24 18:57:15,2025-06-26 05:57:15
+42406,Reach Collective,native,Diego Silva,2025-04-03,Net 15,2025-04-03 21:55:59,2025-04-06
+67654,Traffic Solutions,DISPLAY,Linda Rodriguez,2025-05-11,Net 15,2025-05-11,05/11/2025
+80798,,Social,Linda Gonzalez,09/27/2025,Net 45,2025-09-27 12:04:51,29-09-2025
+38043,Traffic Networks,Email,Priya Chen,30-06-2025,Net 60,2025-06-30,2025-07-03
+18161,Performance Collective, Email ,Wei Muller,2025-08-15 20:00:52,Net 30,2025-08-15,2025-08-16 11:00:52
+85456,Lead Networks, Search ,Arjun Martinez,10/20/2025,Net 60,"Oct 20, 2025",2025-10-22 12:53:49
+64921,Performance Networks,Social,David Wilson,2025-07-08 14:30:41,Net 30,2025-07-08 14:30:41,2025-07-08
+60968,Click Solutions,Video,Noah Gonzalez,09-10-2025,Net 45,2025-10-09 05:51:34,2025-10-09
+71261,Digital Co,Native,James Gonzalez,18-08-2025,weekly,"Aug 18, 2025","Aug 19, 2025"
+96900,Media Partners,Video,Chen Jones,06/29/2025,Net 45,29-06-2025,2025-06-29 11:20:29
+16590,Reach Networks,Display,Michael Anderson,2025-05-07,Net 15,07-05-2025,08-05-2025
+59692,Reach Collective,Email,David Young,1738437917,Net 60,2025-02-01,
+12540,Media Group,Social,Yuki Williams,09/11/2025,Net 30,2025-09-11 02:47:37,2025-09-11 04:47:37
+14067,,Search,Ken Jones,03-04-2025,Net 45,2025-04-03,"Apr 05, 2025"
+72070,Traffic Co,Social,Sofia Haddad,2025-04-10 12:21:51,Net 15,04/10/2025,12-04-2025
+31992,Traffic Collective,social,,"Aug 13, 2025",Net 30,08/13/2025,2025-08-16 10:43:57
+50888,,Video,Michael Williams,2025-08-18,Net 45,2025-08-18,08/19/2025
+23356,Reach Collective,Video,Ken Walker,2025-02-17 00:18:53,weekly,2025-02-17,18-02-2025
+15383,Click Co,Email,Ravi Lopez,2025-01-27 18:43:24,weekly,2025-01-27,29-01-2025
+94874,Click Partners,Email,Olivia Patel,02/10/2025,Net 60,2025-02-10,12-02-2025
+57472,Growth Solutions,SOCIAL,Chen Garcia,2025-10-12,weekly,"Oct 12, 2025",15-10-2025
+95256,Reach Co,Native,Emma Patel,"Jun 30, 2025",Net 60,06/30/2025,1751360175
+87656,Reach Group,Social,Olivia Williams,"Apr 19, 2025",Net 60,2025-04-19,1745272078
+41963,Growth Co,NATIVE,Ravi Gonzalez,05/11/2025,Net 30,2025-05-11,
+74789,Click Labs,EMAIL,Michael Lopez,11-04-2025,Net 15,2025-04-11,13-04-2025
+46655,Reach Co,SEARCH,Aisha Miller,03-02-2025,Net 45,"Feb 03, 2025",2025-02-03
+63271,Growth Co, Social ,Meera Patel,2025-09-08 20:15:04,Net 60,09/08/2025,1757366104
+68743,Media Partners,DISPLAY,,26-09-2025,Net 45,"Sep 26, 2025",29-09-2025
+50135,Click Networks,NATIVE,Aisha Lopez,"Jun 15, 2025",weekly,06/15/2025,06/17/2025
+53357,Click Solutions,Email,David Martinez,2025-04-08 15:15:07,Net 45,"Apr 08, 2025","Apr 09, 2025"
+25814,Performance Group,Search,Lucas Chen,2025-10-24 00:07:19,Net 45,10/24/2025,2025-10-26
+35105,Performance Solutions,Email,David Rossi,2025-08-17 23:20:53,weekly,2025-08-17 23:20:53,2025-08-20 06:20:53
+88222,Reach Partners,Social,,1747798759,Net 45,2025-05-21 03:39:19,2025-05-21 16:39:19
+49618,Media Solutions,Native,Robert Rodriguez,18-01-2025,Net 30,01/18/2025,2025-01-21 07:14:13
+82529,Reach Solutions,Social,Yuki Muller,2025-07-10,Net 30,2025-07-10,2025-07-12 05:19:15
+11607,Reach Networks,Email,Sofia Hernandez,13-03-2025,Net 30,2025-03-13 14:23:38,"Mar 15, 2025"
+43092,Growth Partners,Search,Wei Patel,01/29/2025,weekly,"Jan 29, 2025",2025-01-31 04:29:45
+92502,Media Labs,Social,Noah Nguyen,2025-04-28 23:57:08,Net 30,28-04-2025,30-04-2025
+42530,Traffic Co,Email,Ken Kim,2025-08-29,Net 45,2025-08-29,"Aug 30, 2025"
+78494,Lead Networks,email,,2025-06-16,Net 15,06/16/2025,2025-06-16
+84531,Media Co,Video,,2025-03-22 16:43:25,Net 45,22-03-2025,2025-03-25 06:43:25
+44687,Traffic Labs,Social,Jennifer Chen,1738208359,Net 45,30-01-2025,2025-02-01
+10350,,Video,Ken Patel,24-04-2025,Net 30,1745462640,2025-04-24
+40340,Reach Solutions,Display,Meera Anderson,2025-01-28,Net 45,,01/29/2025
+44675,Performance Networks,Search,Omar Davis,2025-09-09 12:23:35,Net 45,2025-09-09 12:23:35,1757651015
+44816,Digital Partners,Search,Jennifer Walker,2025-04-30,weekly,2025-04-30,2025-05-01 00:08:59
+84607,Reach Networks,Search,Sofia Haddad,04/29/2025,Net 60,2025-04-29 02:20:07,2025-05-01 12:20:07
+45683,,Search,Ken Johnson,2025-06-17,Net 15,,2025-06-18
+89129,,Search,Linda Costa,2025-08-12 09:14:39,weekly,2025-08-12,2025-08-11 21:14:39
+12719,Reach Co,search,Emma Muller,2025-03-10,Net 60,"Mar 10, 2025",2025-03-11 13:53:45
+78021,Growth Group,social,Nadia Wilson,"Sep 04, 2025",Net 60,04-09-2025,04-09-2025
+21959,Growth Group,EMAIL,Priya Hernandez,09/18/2025,Net 30,1758175549,"Sep 20, 2025"
+31079,Click Networks,Video,Diego Martinez,15-09-2025,Net 60,15-09-2025,2025-09-17
+82102,Media Networks,Search,Priya Rodriguez,2025-05-06,Net 30,1746536868,05/06/2025
+62976,Media Solutions,native,Sofia Wilson,01/22/2025,Net 45,1737508387,2025-01-23 16:13:07
+77952,Click Co,Email,Yuki Anderson,2025-10-23 03:37:30,Net 30,2025-10-23,2025-10-23 08:37:30
+36680,Reach Co,Social,Elizabeth Anderson,2025-09-29 04:09:43,Net 60,2025-09-29,2025-10-01 23:09:43
+25915,Media Solutions,native,Noah Davis,2025-10-03 15:39:19,Net 45,2025-10-03 15:39:19,1759631959
+50730,Media Co,EMAIL,John Davis,02/14/2025,Net 60,14-02-2025,1739741523
+25396,Digital Networks,Video,Elizabeth Kumar,2025-10-01 22:54:46,Net 15,2025-10-01,10/03/2025
+64459,Growth Networks,Social,,2025-02-26 04:09:39,Net 60,2025-02-26 04:09:39,2025-02-26 15:09:39
+34983,Digital Collective,Search,David Muller,11-06-2025,Net 15,11-06-2025,1749727957
+76550,Reach Collective, Search ,Elizabeth Rossi,"Apr 26, 2025",weekly,04/26/2025,
+86011,, Social ,Sofia Chen,2025-07-08,Net 15,2025-07-08 02:23:20,2025-07-09 04:23:20
+53573,Lead Networks,Display,Liam Miller,2025-09-28 21:09:23,Net 45,28-09-2025,09/30/2025
+84946,Lead Labs,EMAIL,Mary Hernandez,10/17/2025,Net 60,2025-10-17,2025-10-19
+59968,Lead Solutions,Video,Robert Patel,1736931772,Net 45,15-01-2025,2025-01-18 05:02:52
+75836,Click Collective,Search,Liam Anderson,2025-02-08,weekly,1739035369,2025-02-11 15:22:49
+69890,, Social ,Chen Silva,03/01/2025,Net 30,2025-03-01,2025-03-04 11:45:03
+71537,Reach Group,Native,Meera Gonzalez,10-09-2025,Net 30,09/10/2025,
+53065,Lead Group,video,Meera Muller,2025-07-09 12:00:00,weekly,07/09/2025,07/10/2025
+14705,Traffic Labs,Video,Ravi Martinez,"Mar 30, 2025",Net 30,2025-03-30,2025-04-02
+66881,,Video,Meera Brown,2025-06-22 07:23:01,Net 45,2025-06-22,2025-06-23 08:23:01
+49251,Media Partners,Display,Noah Johnson,2025-04-24 22:23:09,Net 15,24-04-2025,1745713389
+59131,Lead Labs,Social,Aisha Wilson,2025-08-08 18:49:54,Net 45,1754678994,2025-08-09 21:49:54
+32280,Digital Partners,Native,Liam Gonzalez,08/29/2025,Net 45,2025-08-29 16:07:09,2025-08-31 16:07:09
+75230,Digital Labs,Email,Yuki Rodriguez,2025-06-28,Net 15,,30-06-2025
+97404,Media Collective,EMAIL,,2025-09-21 03:47:28,weekly,2025-09-21 03:47:28,2025-09-21 12:47:28
+30706,Traffic Networks,Display,Nadia Martinez,2025-09-06,Net 60,2025-09-06,2025-09-07
+42780,Growth Collective,Display,Michael Gonzalez,2025-07-07 15:49:32,Net 30,2025-07-07 15:49:32,2025-07-09
+41091,Lead Co, Display ,,2025-09-29,Net 15,29-09-2025,"Sep 30, 2025"
+12875,Lead Group, Search ,Nadia Costa,10/30/2025,Net 30,30-10-2025,31-10-2025
+89482,Growth Collective,Display,Emma Walker,31-03-2025,weekly,2025-03-31,1743522691
+56179,Performance Solutions,social,Ken Rodriguez,21-09-2025,Net 45,2025-09-21,2025-09-21 17:13:21
+92345,Traffic Solutions,Video,Mary Martinez,2025-06-21 04:46:11,Net 30,2025-06-21,1750607171
+85965,Click Solutions,Social,John Martinez,05/07/2025,Net 60,1746652474,2025-05-10 15:14:34
+33021,Performance Labs,Native,Ava Lopez,"Jul 26, 2025",weekly,2025-07-26 03:54:09,07/27/2025
+45720,Digital Group,Email,Noah Martinez,17-10-2025,Net 15,2025-10-17,10/18/2025
+25095,Growth Partners,SOCIAL,Emma Davis,2025-09-20 15:47:38,Net 60,09/20/2025,2025-09-23 07:47:38
+83048,Click Partners,Email,James Rodriguez,07/28/2025,Net 30,2025-07-28 09:12:59,1753895579
+69609,Click Solutions,Video,Ravi Rodriguez,16-08-2025,Net 60,1755304181,
+93695,Click Partners,Video,Linda Patel,2025-01-10 17:14:47,weekly,2025-01-10,2025-01-11
+83584,Click Co,Social,Yuki Williams,09/04/2025,Net 60,2025-09-04 18:23:37,06-09-2025
+49608,, Social ,Mary Johnson,"Apr 29, 2025",Net 60,"Apr 29, 2025",2025-05-01
+25220,, Native ,Robert Gonzalez,06/26/2025,Net 15,2025-06-26 04:15:58,2025-06-26 19:15:58
+97881,Lead Co, Video ,Lucas Jones,2025-06-11,Net 30,06/11/2025,1749726014
+74139,Lead Group,Search,Meera Lopez,2025-03-26 09:06:00,Net 60,1742979960,03/28/2025
+68287,,Display,Patricia Costa,2025-05-23,weekly,05/23/2025,2025-05-26 11:48:35
+94518,,EMAIL,David Miller,"Feb 17, 2025",Net 60,2025-02-17 10:36:39,"Feb 19, 2025"
+22015,Performance Solutions,Video,,1737386733,Net 15,01/20/2025,22-01-2025
+41925,,native,Michael Williams,1761364021,weekly,,1761436021
+37152,Performance Collective,Social,Priya Muller,2025-02-27,weekly,,1740817096
+10371,Reach Collective, Social ,Robert Chen,1744100159,Net 45,04/08/2025,04/09/2025
+24408,Media Labs,Search,Arjun Walker,1743673259,weekly,04/03/2025,"Apr 03, 2025"
+52437,Media Labs,Display,Mary Jones,2025-10-16 01:18:48,Net 60,,10/17/2025
+78955,Traffic Solutions,Search,Diego Anderson,,Net 15,2025-10-30 03:38:39,1761899919
+77271,,native,Linda Kim,2025-01-17 20:11:29,weekly,1737144689,20-01-2025
+49535,,Search,Mary Patel,05-06-2025,Net 60,06/05/2025,1749378038
+99928,Traffic Networks, Video ,Sofia Williams,02/01/2025,Net 15,02/01/2025,2025-02-03 15:01:18
+89730,Digital Partners,Social,,03-09-2025,weekly,"Sep 03, 2025",
+81874,Click Networks,Native,Aisha Martinez,26-06-2025,weekly,"Jun 26, 2025",2025-06-26 15:56:03
+89354,Lead Partners,Video,Patricia Silva,"Sep 10, 2025",weekly,2025-09-10,09/08/2025
+38183,Lead Networks,Social,Chen Hernandez,1750906498,Net 60,2025-06-26,2025-06-26
+64524,, Email ,Priya Costa,"Apr 09, 2025",Net 15,2025-04-09,04/12/2025
+30006,Growth Partners,Search,Olivia Williams,02/06/2025,Net 60,2025-02-06 04:58:03,2025-02-06 21:58:03
+22656,Click Collective,social,Omar Johnson,"Aug 16, 2025",weekly,16-08-2025,2025-08-18 06:15:02
+83620,,search,Chen Lopez,2025-09-16,Net 60,09/16/2025,1758187523
+16743,Reach Co,display,Arjun Brown,2025-08-13,weekly,"Aug 13, 2025",08/13/2025
+37884,Digital Solutions, Email ,Linda Brown,2025-05-16 23:17:56,weekly,2025-05-16 23:17:56,2025-05-19 20:17:56
+58176,Traffic Collective,display,Nadia Davis,2025-06-16,weekly,16-06-2025,17-06-2025
+91490,Media Co,Video,Olivia Haddad,1744663656,Net 30,1744663656,2025-04-16 03:47:36
+33647,,Display,Priya Lopez,2025-01-03 08:54:36,Net 45,1735894476,2025-01-06 05:54:36
+28776,Lead Partners,Social,Lucas Silva,1736718281,Net 30,1736718281,2025-01-15 00:44:41
+79531,Performance Networks,Email,Sofia Hernandez,2025-03-03 03:09:38,Net 15,"Mar 03, 2025",2025-03-04
+50846,Click Collective,Native,Ken Williams,21-01-2025,Net 45,2025-01-21 10:20:59,1737552059
+30632,Media Solutions,Search,David Anderson,"Sep 15, 2025",Net 60,2025-09-15 01:42:56,2025-09-17 17:42:56
+73656,Growth Networks, Display ,Michael Muller,07/18/2025,Net 30,07/18/2025,2025-07-19
+55242,Lead Partners,Display,Ravi Costa,"Aug 19, 2025",Net 60,19-08-2025,2025-08-20 10:24:42
+79066,Reach Partners, Social ,Wei Kim,2025-01-22,Net 30,2025-01-22 06:36:17,01/25/2025
+36794,Reach Labs,Social,,2025-04-23 09:50:34,Net 15,2025-04-23,2025-04-23
+25726,Media Networks,Video,Chen Garcia,2025-02-20 04:05:52,Net 60,2025-02-20,"Feb 20, 2025"
+79806,Performance Co,Native,Olivia Costa,2025-05-18 13:04:38,Net 30,"May 18, 2025",20-05-2025
+62044,Media Networks,SEARCH,Sofia Williams,2025-05-02,weekly,2025-05-02 13:56:11,2025-05-02
+66267,, Video ,Chen Martinez,02/14/2025,Net 60,1739554177,15-02-2025
+12733,Click Labs,Native,Sofia Young,2025-09-25,Net 15,2025-09-25,1759059473
+21551,Lead Collective,SEARCH,Linda Wilson,08/17/2025,Net 60,08/17/2025,2025-08-19 19:40:41
+78676,Traffic Networks,display,Lucas Hernandez,2025-03-28 01:12:04,Net 15,2025-03-28,03/28/2025
+32037,Traffic Co,Video,Patricia Kumar,2025-07-18,Net 45,2025-07-18 01:05:51,2025-07-20
+55793,Click Solutions,VIDEO,Olivia Jones,2025-04-02 18:11:07,Net 30,2025-04-02,1743862267
+29194,Reach Labs,Social,Ken Jones,2025-10-23,Net 30,1761198192,
+33218,Growth Networks,Native,Emma Nguyen,06/24/2025,weekly,2025-06-24 08:06:00,06/25/2025
+94278,Click Collective,video,Priya Jones,2025-06-20,Net 30,2025-06-20,"Jun 21, 2025"
+71462,,DISPLAY,,2025-08-18,Net 30,2025-08-18 16:25:54,2025-08-19
+56129,Traffic Group,Email,Sofia Johnson,2025-01-23 02:15:13,Net 15,,24-01-2025
+47627,Traffic Solutions, Search ,Ken Kim,2025-07-16 22:12:52,Net 60,16-07-2025,07/19/2025
+70648,Media Networks,Native,Yuki Miller,2025-05-05 20:50:47,weekly,"May 05, 2025",1746553847
+72341,Digital Partners,email,Patricia Walker,2025-05-14 09:04:19,Net 30,2025-05-14 09:04:19,2025-05-16 07:04:19
+76132,Digital Partners,Social,Meera Anderson,2025-06-20 15:42:28,weekly,2025-06-20 15:42:28,2025-06-20
+78517,Digital Group,DISPLAY,Elizabeth Gonzalez,1749405624,Net 15,2025-06-08,"Jun 11, 2025"
+98984,Media Collective,Video,Yuki Hernandez,2025-01-26 14:20:34,Net 15,2025-01-26,1738131634
+22387,Lead Group,Display,Lucas Costa,2025-08-23,Net 45,,
+53694,, Video ,Robert Lopez,05/01/2025,Net 60,1746099249,"May 01, 2025"
+26901,Traffic Group,Native,Wei Silva,2025-05-08 13:37:24,Net 45,2025-05-08,1746754644
+97833,Traffic Solutions,VIDEO,Chen Kumar,2025-05-21,Net 30,05/21/2025,24-05-2025
+57526,Reach Labs,Social,Priya Muller,2025-07-08,Net 45,"Jul 08, 2025",
+39693,Digital Labs,Search,Elizabeth Walker,02/09/2025,weekly,2025-02-09,2025-02-10
+80748,Media Solutions,display,Ava Muller,2025-08-29 00:28:14,Net 45,"Aug 29, 2025",08/29/2025
+88282,Lead Labs,Social,Jennifer Young,2025-09-27 01:47:21,weekly,1758937641,2025-09-28 13:47:21
+31697,Growth Partners,Email,Arjun Costa,2025-10-07,Net 45,2025-10-07 11:01:28,09-10-2025
+68222,Reach Collective,Video,Noah Anderson,1743541435,weekly,2025-04-01,
+41348,Reach Collective,EMAIL,,03/17/2025,Net 15,1742199702,2025-03-20
+98907,,display,Emma Gonzalez,2025-07-15 07:25:48,weekly,07/15/2025,
+64874,Digital Collective,Social,Noah Kim,2025-02-23,Net 15,2025-02-23 17:58:04,24-02-2025
+16839,Growth Collective,Display,Omar Brown,2025-10-04 06:44:15,weekly,10/04/2025,10/06/2025
+26341,Reach Partners,Social,David Anderson,"Jul 19, 2025",Net 45,2025-07-19,20-07-2025
+67340,,email,Ava Lopez,1736584503,Net 60,"Jan 11, 2025",1736782503
+16980,Lead Co,DISPLAY,Linda Gonzalez,"Feb 01, 2025",Net 15,2025-02-01,2025-02-03 13:37:04
+39430,,search,Olivia Haddad,09/10/2025,Net 15,10-09-2025,11-09-2025
+29142,Digital Partners,DISPLAY,Olivia Patel,2025-09-28,Net 45,"Sep 28, 2025",
+71487,,Search,Ava Williams,2025-01-08 09:07:44,Net 15,2025-01-08,10-01-2025
+38266,Digital Co,VIDEO,Ken Kumar,2025-06-14,Net 30,1749891673,2025-06-14 15:01:13
+47762,Performance Group,Search,Mary Davis,2025-06-13,weekly,06/13/2025,2025-06-13
+69914,Traffic Partners,Email,Ken Chen,"Jan 07, 2025",weekly,2025-01-07,2025-01-09
+85372,Performance Solutions,Social,Elizabeth Wilson,1735742090,weekly,01/01/2025,2025-01-02
+56244,Performance Co,email,Jennifer Costa,2025-09-17,Net 30,2025-09-17 12:12:51,2025-09-19 14:12:51
+78614,Click Partners, Native ,Omar Kumar,,weekly,2025-07-17 03:23:07,
+12665,Lead Collective,Email,Mary Silva,2025-05-31,Net 15,1748671182,05/31/2025
+43246,,Search,Arjun Davis,2025-10-12,Net 30,,2025-10-14
+86271,Click Labs,SEARCH,Arjun Chen,05/12/2025,Net 45,12-05-2025,2025-05-12 18:29:20
+99742,,Email,Yuki Garcia,2025-02-22 08:55:01,Net 30,22-02-2025,2025-02-24 08:55:01
+69988,Media Group,Social,Mary Walker,2025-03-19 11:11:36,Net 30,2025-03-19 11:11:36,"Mar 21, 2025"
+51365,Reach Co,Email,Olivia Chen,2025-07-03,Net 15,"Jul 03, 2025",2025-07-06 15:24:20
+14799,Performance Group,display,Liam Muller,19-01-2025,Net 15,2025-01-19 13:33:57,"Jan 21, 2025"
+45811,Traffic Collective,Display,Chen Gonzalez,2025-10-16 16:07:47,Net 60,"Oct 16, 2025",18-10-2025
+60678,,Email,Meera Patel,2025-05-23,weekly,2025-05-23 15:55:17,2025-05-23 15:55:17
+44959,Traffic Solutions,Email,John Wilson,22-08-2025,Net 45,08/22/2025,2025-08-25
+81496,Reach Group, Search ,John Hernandez,1757866369,Net 15,2025-09-14 16:12:49,1757880769
+50173,Growth Co,Video,Chen Garcia,2025-09-25,Net 60,09/25/2025,2025-09-28
+56077,,Video,Liam Lopez,2025-08-27 18:49:52,Net 60,2025-08-27 18:49:52,1756352992
+45986,Media Partners,Video,,2025-05-22 02:18:18,weekly,"May 22, 2025",2025-05-25 02:18:18
+99051,Digital Partners,Social,Liam Kim,2025-09-21 08:14:46,Net 60,2025-09-21 08:14:46,2025-09-21
+14561,Digital Partners,Social,Emma Silva,"May 23, 2025",Net 15,2025-05-23 06:25:43,05/23/2025
+60181,Media Co,Social,Ravi Anderson,05/25/2025,Net 15,2025-05-25,"May 28, 2025"
+68188,Traffic Co, Social ,Aisha Lopez,04-06-2025,Net 15,2025-06-04 13:56:46,06/06/2025
+95139,,Search,James Rossi,2025-03-14,Net 60,2025-03-14 06:05:36,2025-03-15
+77861,Lead Co,Search,David Muller,04/12/2025,Net 60,2025-04-12 02:04:35,12-04-2025
+38124,Reach Solutions,Email,Michael Brown,2025-02-22 17:04:49,Net 30,1740243889,2025-02-25 07:04:49
+69250,Digital Solutions,Email,John Walker,"Sep 22, 2025",Net 15,"Sep 22, 2025",2025-09-25 12:02:28
+97535,Click Solutions,search,Omar Chen,2025-04-23,Net 15,1745432541,2025-04-25
+30644,Digital Collective,Display,Aisha Davis,2025-02-17,Net 45,2025-02-17 03:10:48,02/18/2025
+28202,Performance Collective,EMAIL,James Lopez,"Aug 04, 2025",weekly,08/04/2025,08/04/2025
+58353,Growth Collective,Native,Robert Kim,"Feb 03, 2025",Net 30,02/03/2025,2025-02-05 18:35:11
+50539,Lead Solutions,Video,,06/09/2025,Net 60,2025-06-09 12:53:16,09-06-2025
+85353,Traffic Labs,Display,Yuki Williams,1750788238,Net 60,2025-06-24,2025-06-26 11:03:58
+99143,Click Labs,Native,Yuki Nguyen,2025-03-12,Net 45,2025-03-12 16:01:09,
+66704,Media Collective, Search ,Aisha Jones,29-04-2025,Net 45,2025-04-29,2025-05-01 07:38:46
+31229,Click Solutions,Social,,04/21/2025,Net 30,04/21/2025,"Apr 23, 2025"
+42847,Performance Solutions,NATIVE,David Jones,2025-08-31 17:37:50,Net 15,"Aug 31, 2025",1756910270
+90534,Traffic Co, Video ,Jennifer Nguyen,2025-08-14,Net 45,,"Aug 14, 2025"
+32439,,Native,Mary Young,2025-01-12 00:27:36,Net 30,2025-01-12 00:27:36,
+15958,Reach Solutions,Social,Emma Nguyen,11-06-2025,weekly,2025-06-11,06/14/2025
+93753,Media Networks, Video ,Omar Martinez,2025-09-07,Net 15,1757228434,
+73300,,VIDEO,Wei Martinez,1750908015,Net 30,1750908015,"Jun 27, 2025"
+17852,Digital Networks,Email,Diego Anderson,2025-03-21,Net 15,03/21/2025,"Mar 21, 2025"
+89516,Digital Group,Video,Priya Rossi,2025-05-15,Net 60,05/15/2025,2025-05-17
+27139,Click Co,Native,Patricia Hernandez,,Net 60,2025-04-04 21:09:36,04/06/2025
+26059,Reach Networks,Social,Robert Brown,2025-01-20,Net 15,2025-01-20,2025-01-21
+60351,Lead Labs,Social,Olivia Hernandez,2025-08-13 08:26:00,Net 15,2025-08-13,15-08-2025
+34881,Digital Networks,NATIVE,Sofia Patel,2025-04-30,Net 60,1746042500,2025-05-02 22:48:20
+13037,Traffic Networks, Native ,Sofia Davis,2025-03-25 13:17:28,weekly,1742908648,2025-03-25 16:17:28
+56254,Media Partners,Display,Diego Kim,2025-09-12,Net 60,2025-09-12 02:08:43,2025-09-12 09:08:43
+47453,Media Collective,Search,Chen Jones,2025-04-13,Net 15,2025-04-13 17:03:57,14-04-2025
+62855,Click Partners, Email ,Mary Nguyen,2025-08-07,Net 45,"Aug 07, 2025",2025-08-08 08:30:45
+57516,Reach Partners, Email ,Aisha Anderson,2025-10-24 20:45:45,weekly,10/24/2025,27-10-2025
+46663,Traffic Labs,search,Wei Lopez,2025-05-12 16:30:14,weekly,2025-05-12 16:30:14,"May 15, 2025"
+57920,Digital Labs,NATIVE,Aisha Gonzalez,2025-07-14,Net 30,14-07-2025,07/14/2025
+15938,Media Labs,video,Priya Walker,2025-07-03 23:36:55,weekly,2025-07-03 23:36:55,2025-07-05 17:36:55
+69898,Digital Co,Native,Robert Hernandez,2025-08-27,Net 15,2025-08-27 02:12:32,08/29/2025
+31299,Lead Co,Video,Olivia Martinez,19-08-2025,Net 15,2025-08-19 13:54:53,2025-08-21 04:54:53
+76494,Growth Solutions,Native,Elizabeth Patel,01/07/2025,Net 15,2025-01-07 11:04:03,2025-01-08
+53416,Traffic Networks,native,Elizabeth Walker,09-10-2025,Net 30,09-10-2025,2025-10-12 15:30:41
+88238,Growth Group,Video,,2025-08-13 15:46:17,weekly,"Aug 13, 2025",2025-08-14
+39824,Media Co,Email,Jennifer Kumar,2025-09-02 06:56:24,weekly,2025-09-02,2025-09-04
+59832,Digital Collective,VIDEO,Linda Johnson,2025-08-11 08:44:30,Net 30,2025-08-11 08:44:30,08/13/2025
+35006,Media Networks, Display ,Chen Jones,"Jun 10, 2025",Net 45,2025-06-10 09:04:01,1749582241
+63788,Growth Collective,Video,Lucas Johnson,10/02/2025,Net 45,2025-10-02 02:18:07,02-10-2025
+77984,Performance Co, Display ,,"Jul 24, 2025",Net 60,2025-07-24,2025-07-25
+51124,Digital Networks,NATIVE,Priya Chen,2025-05-18,Net 15,2025-05-18 14:11:38,21-05-2025
+89963,Growth Labs,social,David Chen,04/26/2025,Net 45,2025-04-26 22:12:49,2025-04-27
+49008,Reach Solutions,Social,Meera Haddad,07/09/2025,Net 15,09-07-2025,2025-07-11 15:50:20
+72888,Click Co, Video ,,2025-02-17,weekly,"Feb 17, 2025",2025-02-19
+98686,,Display,Emma Walker,02/26/2025,Net 15,2025-02-26 21:15:23,2025-02-25 02:15:23
+15513,Reach Solutions,Search,,2025-09-12 18:06:09,Net 15,09/12/2025,2025-09-13 03:06:09
+72793,Performance Labs,Native,David Chen,,Net 15,09/28/2025,"Sep 30, 2025"
+27992,Traffic Co,Video,Nadia Davis,05-04-2025,Net 30,2025-04-05 03:52:21,1743868341
+97796,Performance Solutions, Social ,Mary Brown,06/10/2025,Net 15,2025-06-10 12:14:52,06/12/2025
+71918,Traffic Solutions,Social,James Chen,2025-03-03 08:07:03,Net 60,2025-03-03 08:07:03,2025-03-04 22:07:03
+95575,Growth Networks, Video ,Michael Muller,2025-04-22,Net 15,2025-04-22,"Apr 23, 2025"
+47409,,SEARCH,,2025-04-01 04:26:56,weekly,04/01/2025,03-04-2025
+14888,Digital Networks,Social,Mary Young,"Jun 04, 2025",Net 60,"Jun 04, 2025",06/05/2025
+34420,Reach Partners,Search,Elizabeth Nguyen,"Aug 23, 2025",Net 30,2025-08-23 02:20:40,08/24/2025
+53914,Reach Networks,Video,Omar Kumar,07/11/2025,Net 45,2025-07-11,
+76088,Growth Group,Social,Noah Brown,1746785517,Net 45,,09-05-2025
+70150,Reach Solutions,social,,"May 11, 2025",Net 15,"May 11, 2025",05/14/2025
+84420,Performance Labs,native,Liam Silva,07-06-2025,Net 60,2025-06-07,2025-06-08 06:26:39
+77538,Click Partners,Email,,2025-03-13,Net 45,"Mar 13, 2025",1741925828
+72580,Click Labs, Search ,David Gonzalez,2025-04-02 11:13:01,Net 60,2025-04-02,04-04-2025
+44995,Click Group,Native,Lucas Nguyen,2025-01-05 10:35:19,Net 15,01/05/2025,"Jan 07, 2025"
+95679,Click Solutions, Social ,Mary Costa,2025-02-15 21:56:07,Net 60,2025-02-15,2025-02-16 10:56:07
+50213,Digital Networks, Video ,Aisha Haddad,2025-10-26,Net 15,10/26/2025,2025-10-29 17:26:19
+25389,Reach Group,Native,,"Feb 21, 2025",Net 60,21-02-2025,2025-02-22 23:57:04
+30078,Growth Solutions,Native,Arjun Wilson,2025-09-30 14:33:42,weekly,09/30/2025,2025-10-03 09:33:42
+71712,Performance Collective,Social,Ravi Muller,2025-08-20,Net 30,"Aug 20, 2025","Aug 21, 2025"
+78879,Growth Co,VIDEO,Arjun Williams,2025-08-08 02:26:01,Net 30,2025-08-08 02:26:01,08/09/2025
+18094,Performance Co,Native,Robert Garcia,2025-05-08,weekly,05/08/2025,2025-05-09 15:16:40
+67912,Traffic Solutions,Social,Meera Nguyen,1752091944,Net 30,2025-07-09 20:12:24,2025-07-10 04:12:24
+76895,Growth Collective,Search,Sofia Jones,2025-07-19,Net 60,07/19/2025,07/21/2025
+69873,Media Co,Email,Ravi Walker,2025-04-30,Net 30,2025-04-30 16:20:54,"May 03, 2025"
+61897,,Search,Lucas Miller,"Aug 13, 2025",Net 30,2025-08-13,"Aug 15, 2025"
+15936,Lead Group,Video,John Chen,24-01-2025,Net 30,01/24/2025,
+71875,Media Group,email,Jennifer Muller,1740233838,Net 60,02/22/2025,"Feb 22, 2025"
+59081,Lead Networks,Email,Wei Williams,,weekly,"Sep 23, 2025",2025-09-24
+27431,Click Partners,Social,Omar Gonzalez,2025-07-25,Net 45,07/25/2025,2025-07-27 18:10:11
+39188,Media Collective,search,Elizabeth Anderson,2025-09-19,weekly,2025-09-19,2025-09-22
+65591,Lead Collective,SOCIAL,Linda Anderson,1747304793,Net 45,1747304793,2025-05-15
+46129,Performance Solutions,Search,Mary Walker,14-09-2025,Net 60,2025-09-14 09:29:18,2025-09-15
+90599,Media Labs,Social,John Brown,1755619058,Net 30,2025-08-19,2025-08-19 18:57:38
+68515,Media Labs,Video,Mary Gonzalez,20-06-2025,Net 45,06/20/2025,06/21/2025
+80747,Performance Collective,SEARCH,Robert Kumar,1745395670,Net 45,2025-04-23 08:07:50,2025-04-24 11:07:50
+85511,Click Co,Native,Emma Costa,2025-05-05 12:48:55,Net 45,05-05-2025,2025-05-07 19:48:55
+49552,Digital Solutions,Native,Linda Wilson,2025-04-27 16:52:18,Net 15,1745772738,1745963538
+17989,Digital Solutions,Video,Chen Chen,07/12/2025,Net 30,07/12/2025,2025-07-15 00:31:14
+55143,Lead Collective, Native ,Priya Haddad,2025-06-11 16:25:36,Net 60,06/11/2025,06/13/2025
+29558,Reach Networks,Social,Emma Chen,07/03/2025,Net 45,2025-07-03 21:30:55,2025-07-06
+39536,Reach Collective,VIDEO,Robert Walker,29-06-2025,Net 30,2025-06-29 19:42:26,"Jul 01, 2025"
+83713,Lead Networks, Native ,,31-05-2025,Net 45,2025-05-31 20:19:40,2025-06-03
+43422,Performance Group,VIDEO,John Anderson,2025-05-25,Net 30,2025-05-25,2025-05-25 19:41:34
+80206,Performance Partners,Display,Wei Costa,"Aug 23, 2025",weekly,2025-08-23,2025-08-24
+15183,Traffic Labs,native,Lucas Costa,2025-08-06,Net 45,2025-08-06 00:51:50,2025-08-07
+72835,Performance Collective, Display ,Elizabeth Smith,"Mar 24, 2025",Net 45,03/24/2025,03/24/2025
+25376,Growth Labs,Video,Ken Haddad,2025-03-21,Net 60,03/21/2025,2025-03-23
+41369,Click Collective,Display,Wei Anderson,"Jul 27, 2025",Net 15,2025-07-27,27-07-2025
+50425,Reach Group,native,Ava Patel,"Jun 30, 2025",Net 30,2025-06-30 23:28:21,1751581701
+51973,Performance Group,Display,Chen Johnson,2025-08-07,Net 45,08/07/2025,08/08/2025
+29126,Media Group,Native,Nadia Nguyen,2025-10-07,Net 60,10/07/2025,2025-10-09
+48691,Digital Labs,Display,,"Aug 10, 2025",Net 45,"Aug 10, 2025",2025-08-12 21:49:23
+75444,Click Group,Email,Lucas Silva,2025-10-15 05:30:59,Net 60,10/15/2025,2025-10-16 22:30:59
+70401,Digital Solutions,Display,Jennifer Jones,"Oct 07, 2025",weekly,2025-10-07,2025-10-09
+74004,Digital Co, Video ,Mary Kumar,14-01-2025,Net 30,01/14/2025,01/14/2025
+97584,Media Collective,Search,Chen Jones,2025-09-02,Net 45,,2025-09-04 05:33:55
+18908,Digital Partners,SOCIAL,Aisha Anderson,2025-05-25 22:28:57,Net 30,05/25/2025,2025-05-28 06:28:57
+90980,Growth Solutions,Email,James Smith,2025-07-26 16:34:47,weekly,2025-07-26 16:34:47,2025-07-27
+63914,Media Partners,NATIVE,Lucas Rodriguez,2025-07-28,Net 15,,2025-07-28 10:26:27
+12246,Lead Collective,Social,Patricia Brown,23-07-2025,Net 45,2025-07-23 15:37:34,
+41584,Performance Co,native,David Young,2025-05-18,Net 15,2025-05-18,"May 21, 2025"
+62022,Traffic Group, Email ,Sofia Nguyen,1743850302,Net 45,2025-04-05 10:51:42,"Apr 06, 2025"
+49318,Traffic Solutions,Video,Emma Johnson,"Feb 06, 2025",Net 60,2025-02-06,08-02-2025
+59710,Lead Co,Email,,2025-01-04,Net 45,2025-01-04 16:04:55,1736010295
+20837,,Email,Yuki Walker,2025-05-09 15:39:57,weekly,2025-05-09 15:39:57,1746952797
+22499,,SOCIAL,Ava Haddad,2025-08-09,Net 60,08/09/2025,"Aug 10, 2025"
+45532,Media Partners,video,David Chen,07-08-2025,Net 30,2025-08-07 20:17:33,10-08-2025
+33508,Click Partners, Social ,Nadia Jones,20-10-2025,Net 60,1760931071,2025-10-22 06:31:11
+20084,Reach Labs, Native ,Linda Nguyen,2025-06-01 03:12:08,weekly,2025-06-01,06/02/2025
+53480,Lead Collective,Video,Robert Walker,"Sep 25, 2025",Net 30,09/25/2025,2025-09-28 08:50:23
+75639,Click Partners,Search,Chen Davis,2025-01-30,Net 15,2025-01-30 12:32:29,2025-01-31 10:32:29
+89320,,Display,James Silva,17-04-2025,Net 60,2025-04-17,2025-04-17 05:35:33
+74304,Performance Group,Native,Wei Wilson,03/14/2025,weekly,03/14/2025,2025-03-16 00:12:07
+96595,Lead Partners,Native,Elizabeth Walker,2025-04-06,Net 30,,2025-04-06
+20752,Reach Labs,email,Meera Walker,2025-09-04,Net 45,1756959784,"Sep 06, 2025"
+61068,Click Group,Search,John Smith,2025-04-30 17:15:39,Net 60,2025-04-30,2025-05-03 06:15:39
+57175,Reach Partners,Social,John Garcia,06/17/2025,Net 60,2025-06-17 09:01:12,2025-06-17 17:01:12
+83005,Lead Partners,Search,John Lopez,2025-08-04 05:42:10,Net 30,2025-08-04,04-08-2025
+88240,Click Collective, Email ,James Martinez,10-06-2025,Net 60,2025-06-10 16:59:21,2025-06-13
+21101,Performance Co,Native,Jennifer Costa,05/28/2025,Net 45,,
+28198,,Display,Diego Jones,2025-01-25 13:41:33,Net 45,"Jan 25, 2025",2025-01-27 18:41:33
+66973,Reach Networks, Display ,Diego Walker,2025-01-30 20:57:32,Net 15,2025-01-30,"Feb 02, 2025"
+42990,Performance Solutions,Video,Diego Kim,2025-08-28 11:46:11,Net 45,2025-08-28 11:46:11,2025-08-31 11:46:11
+70012,Traffic Labs,Display,James Gonzalez,2025-05-10 00:29:19,weekly,10-05-2025,2025-05-11 00:29:19
+59792,Click Networks,Display,Chen Young,09/10/2025,weekly,2025-09-10,2025-09-11
+27842,Reach Group,NATIVE,Meera Miller,07/06/2025,Net 15,"Jul 06, 2025","Jul 07, 2025"
+33283,Lead Group,Display,Lucas Haddad,"Sep 03, 2025",Net 60,2025-09-03 19:04:42,09/04/2025
+85481,,EMAIL,David Young,1748874315,Net 15,2025-06-02 14:25:15,
+24927,Performance Co,Native,,26-10-2025,weekly,2025-10-26,2025-10-28
+13527,Growth Solutions,social,Sofia Walker,"Apr 24, 2025",Net 30,2025-04-24 03:24:13,2025-04-25 22:24:13
+63627,Growth Labs,Video,Elizabeth Davis,09-04-2025,Net 45,,2025-04-07
+65460,,Email,Ken Patel,2025-08-15 02:54:27,Net 60,2025-08-15,2025-08-16
+80040,Lead Co,SEARCH,,2025-09-30 11:42:19,weekly,2025-09-30 11:42:19,1759282939
+87833,Traffic Partners,SOCIAL,Ravi Costa,2025-05-18,Net 45,18-05-2025,2025-05-19 17:55:19
+94803,Media Co,Video,,2025-06-05,Net 15,2025-06-05 04:42:26,05-06-2025
+66420,Traffic Partners,SEARCH,David Davis,2025-07-18,weekly,2025-07-18 07:50:51,07/20/2025
+83137,Performance Networks,Display,Wei Anderson,2025-10-27,weekly,2025-10-27 22:45:04,
+75597,Digital Group,Search,Diego Brown,"Apr 25, 2025",Net 60,"Apr 25, 2025",2025-04-28
+21253,Traffic Collective,Video,,05/02/2025,Net 15,2025-05-02 03:01:43,"May 04, 2025"
+69681,Performance Co,email,,02/07/2025,Net 60,1738965285,10-02-2025
+69303,,Display,Mary Walker,04-10-2025,Net 30,,1759564585
+12960,Click Solutions,Search,Ravi Walker,2025-03-05 19:53:28,Net 45,2025-03-05,2025-03-08 02:53:28
+77632,Digital Co,Social,Priya Chen,2025-06-15 14:03:02,Net 60,06/15/2025,
+40389,Lead Solutions, Social ,Jennifer Silva,1757745193,Net 60,2025-09-13,2025-09-13 09:33:13
+61849,Media Solutions,NATIVE,Ava Miller,24-06-2025,weekly,24-06-2025,
+66302,Lead Partners,VIDEO,Michael Miller,2025-04-19,Net 30,04/19/2025,2025-04-21 17:21:42
+85674,,Native,,07-05-2025,Net 45,2025-05-07 14:23:58,"May 08, 2025"
+69972,Traffic Group,Video,Liam Patel,2025-07-24 22:39:37,Net 15,"Jul 24, 2025",1753432777
+88246,Lead Co, Email ,Nadia Brown,2025-05-16 02:53:33,Net 15,1747364013,1747472013
+90918,Digital Collective,Video,Meera Walker,2025-04-26 12:23:12,weekly,2025-04-26,28-04-2025
+87354,Traffic Solutions,social,Priya Brown,2025-04-03 15:39:32,Net 15,1743694772,2025-04-06 01:39:32
+25328,Digital Group,Video,Robert Kumar,2025-05-31,Net 60,2025-05-31,"Jun 02, 2025"
+88174,Digital Co,Email,Chen Garcia,2025-07-09,weekly,07/09/2025,2025-07-11
+94575,,Social,Diego Martinez,02/24/2025,Net 45,2025-02-24,2025-02-24 16:39:30
+51232,Growth Co,Search,Liam Lopez,2025-01-04,Net 60,01/04/2025,"Jan 05, 2025"
+27895,Performance Collective,email,Omar Kumar,11-09-2025,Net 60,09/11/2025,"Sep 12, 2025"
+63626,Growth Networks, Video ,Olivia Anderson,07/09/2025,Net 45,2025-07-09,07/12/2025
+20835,Media Collective,Social,Elizabeth Johnson,04/17/2025,Net 45,04/17/2025,04/20/2025
+80465,Reach Labs,Email,Nadia Rossi,2025-10-28 00:39:57,Net 60,1761611997,2025-10-28 21:39:57
+82053,Traffic Co,Search,David Muller,30-07-2025,Net 15,07/30/2025,1753996019
+81046,Media Collective,Video,Sofia Chen,2025-03-26 20:57:30,Net 60,2025-03-26,2025-03-29
+23423,Performance Group,Search,Sofia Rodriguez,1747385902,Net 30,2025-05-16 08:58:22,2025-05-19 07:58:22
+67549,Traffic Collective,Social,Michael Walker,14-10-2025,weekly,1760439784,2025-10-15
+55957,Lead Labs, Native ,Robert Walker,03/22/2025,Net 45,22-03-2025,1742629805
+17780,Click Co,Display,Ken Chen,2025-03-07 09:23:26,Net 15,1741339406,2025-03-09 01:23:26
+48356,Reach Co,Display,Liam Kumar,2025-09-21,Net 30,2025-09-21 19:31:42,2025-09-24 10:31:42
+27771,Lead Partners, Display ,Liam Silva,02/19/2025,Net 45,02/19/2025,22-02-2025
+42725,,Display,Olivia Davis,"Oct 23, 2025",Net 60,2025-10-23 17:26:53,2025-10-24
+74154,Digital Co,Video,David Silva,10-06-2025,Net 60,2025-06-10 20:51:27,2025-06-11 17:51:27
+69243,Traffic Solutions,Search,Wei Kumar,10/19/2025,Net 15,2025-10-19,2025-10-19
+58374,Growth Networks,Display,Nadia Smith,"Oct 28, 2025",Net 30,10/28/2025,30-10-2025
+70089,Click Collective,Search,Noah Chen,2025-06-04,Net 45,2025-06-04 10:58:50,2025-06-05
+66314,Performance Networks,Display,Priya Young,04/21/2025,Net 15,1745205404,2025-04-21 03:16:44
+81737,Digital Co,email,Noah Hernandez,"Sep 23, 2025",Net 30,2025-09-23,2025-09-24
+16021,Traffic Solutions,Email,James Brown,03/03/2025,Net 60,2025-03-03 08:30:47,"Mar 04, 2025"
+69836,Media Networks,SOCIAL,Meera Jones,2025-09-10 10:24:46,Net 15,1757499886,1757579086
+30837,Reach Partners,VIDEO,Arjun Rodriguez,,Net 15,2025-02-02,02/03/2025
+97098,Digital Partners,email,Yuki Martinez,1760049727,Net 45,"Oct 09, 2025","Oct 10, 2025"
+66260,Traffic Solutions,Search,James Miller,2025-07-05,Net 30,2025-07-05,"Jul 07, 2025"
+27393,Performance Co,Video,Sofia Smith,2025-01-04,Net 15,2025-01-04 03:08:54,"Jan 04, 2025"
+25806,,Social,Diego Williams,03/30/2025,Net 60,"Mar 30, 2025",2025-04-02 05:56:22
+21708,,Display,Arjun Martinez,"Feb 23, 2025",Net 60,2025-02-23 06:08:15,2025-02-24
+27451,,Native,Nadia Smith,26-08-2025,Net 45,,"Aug 28, 2025"
+67684,Click Solutions,Social,Yuki Rossi,2025-02-28 18:54:32,Net 60,2025-02-28 18:54:32,2025-03-03
+90750,Growth Collective,SOCIAL,John Brown,02/24/2025,Net 30,02/24/2025,2025-02-24 14:01:01
+87276,Lead Group,Email,Priya Walker,"Feb 24, 2025",Net 45,,25-02-2025
+46302,, Native ,Ken Kim,10/08/2025,weekly,1759888373,1760021573
+47345,Media Collective,Video,Ava Martinez,2025-03-21,weekly,"Mar 21, 2025",2025-03-22 01:53:34
+89551,Performance Solutions,EMAIL,Elizabeth Silva,1737520636,Net 45,"Jan 22, 2025",2025-01-24 12:37:16
+74865,Lead Partners,Social,Diego Silva,2025-08-19 15:49:36,Net 30,"Aug 19, 2025",
+79243,Media Group,Display,Robert Gonzalez,2025-08-09 17:41:21,Net 60,,08/12/2025
+57895,,Email,Emma Williams,2025-01-07 11:33:23,weekly,2025-01-07 11:33:23,"Jan 07, 2025"
+18851,Media Group,Social,Mary Johnson,06/04/2025,weekly,06/04/2025,1749201825
+47550,Lead Networks,Video,Wei Williams,2025-09-06 18:14:24,weekly,2025-09-06 18:14:24,06-09-2025
+80471,,search,Elizabeth Williams,2025-07-18 13:42:18,Net 45,2025-07-18,2025-07-18 21:42:18
+30365,Click Networks,native,Yuki Muller,2025-09-10 08:56:36,Net 30,2025-09-10 08:56:36,"Sep 11, 2025"
+50654,Lead Solutions,Social,Mary Davis,1738582421,Net 60,2025-02-03 11:33:41,2025-02-04 07:33:41
+25202,Growth Co,Native,Mary Martinez,"Sep 16, 2025",Net 45,2025-09-16 16:18:41,2025-09-19
+25655,,Social,Meera Smith,"Mar 05, 2025",Net 60,"Mar 05, 2025","Mar 08, 2025"
+55443,,Display,Robert Rossi,2025-04-15,Net 30,2025-04-15 09:03:59,2025-04-16 16:03:59
+13847,,EMAIL,David Kumar,"Jan 25, 2025",Net 15,2025-01-25,2025-01-28
+85582,Traffic Networks,Email,Aisha Lopez,2025-01-22 12:43:47,Net 60,2025-01-22,2025-01-25
+84302,,SOCIAL,David Muller,"Feb 09, 2025",weekly,"Feb 09, 2025",1739279315
+98358,Traffic Labs,Video,Aisha Smith,18-01-2025,Net 30,18-01-2025,1737206866
+42053,Media Networks,Display,Wei Jones,"Mar 11, 2025",Net 30,2025-03-11 12:02:12,2025-03-11 16:02:12
+82465,Lead Labs,Display,Linda Wilson,2025-10-07 17:34:12,Net 15,2025-10-07,10/09/2025
+45554,Traffic Co,display,Patricia Kumar,"Sep 19, 2025",Net 30,"Sep 19, 2025",2025-09-20 18:51:01
+33507,,Native,Mary Gonzalez,01/27/2025,Net 60,01/27/2025,"Jan 29, 2025"
+47002,Reach Group,Search,Omar Anderson,"Jan 04, 2025",Net 15,2025-01-04 02:16:41,2025-01-05
+36302,Reach Co,Display,Lucas Kim,2025-04-05 05:02:48,Net 60,2025-04-05,2025-04-07
+58270,Growth Collective,Social,Lucas Chen,2025-10-23,Net 45,"Oct 23, 2025",23-10-2025
+29735,Media Networks,SEARCH,Linda Chen,,Net 30,05/15/2025,2025-05-15
+53911,Media Collective,Video,Wei Rossi,2025-10-10 10:08:07,Net 15,2025-10-10 10:08:07,2025-10-12 15:08:07
+23624,Performance Co,social,Chen Patel,24-01-2025,Net 45,2025-01-24 06:15:45,2025-01-27 01:15:45
+46677,Traffic Partners,Social,Ava Kumar,2025-06-10 09:58:06,Net 15,2025-06-10 09:58:06,1749574686
+70091,Traffic Co, Search ,Aisha Jones,"Sep 05, 2025",Net 60,1757071010,
+19808,Media Networks,video,Robert Davis,2025-04-24,Net 15,04/24/2025,"Apr 23, 2025"
+51288,Lead Solutions,Video,Priya Hernandez,2025-06-25 20:00:32,Net 15,2025-06-25 20:00:32,06/27/2025
+40619,Traffic Labs, Social ,Emma Muller,"Aug 16, 2025",Net 30,2025-08-16,"Aug 17, 2025"
+30369,Traffic Labs,Email,Sofia Hernandez,2025-06-07 20:58:17,Net 30,2025-06-07,2025-06-07
+80244,Click Collective,Social,Sofia Martinez,2025-06-29 22:42:11,Net 15,29-06-2025,01-07-2025
+25717,Traffic Labs,Video,Elizabeth Young,10/01/2025,weekly,2025-10-01 16:19:29,2025-10-02 13:19:29
+15286,Performance Collective,Display,Robert Williams,1759552082,Net 45,04-10-2025,2025-10-04 07:28:02
+56627,Lead Co,Search,Ravi Martinez,2025-04-12 00:55:48,Net 45,2025-04-12 00:55:48,1744444548
+14073,Lead Collective, Email ,Omar Rossi,08/02/2025,Net 45,2025-08-02 15:29:54,2025-08-02 22:29:54
+22415,Growth Partners,social,Patricia Smith,24-01-2025,Net 45,2025-01-24 22:47:54,2025-01-24
+27133,Performance Collective,EMAIL,Arjun Costa,2025-09-02,Net 30,2025-09-02 18:47:56,2025-09-03 00:47:56
+86326,Reach Collective,search,James Williams,2025-03-18,Net 60,18-03-2025,2025-03-18 20:10:00
+26880,Traffic Collective,Display,Patricia Johnson,2025-06-29 00:47:02,Net 30,2025-06-29,1751399222
+32018,Lead Collective, Video ,Wei Patel,01/12/2025,Net 60,2025-01-12 10:47:41,"Jan 14, 2025"
+99550,Lead Labs,display,Michael Garcia,17-04-2025,Net 15,2025-04-17 19:00:57,2025-04-18 09:00:57
+68459,Digital Partners,NATIVE,Ken Kim,2025-04-06 10:52:48,Net 15,1743936768,07-04-2025
+75390,Lead Co,Email,Mary Williams,"Apr 19, 2025",Net 60,04/19/2025,2025-04-22 00:42:04
+27987,Lead Labs,video,Ava Walker,2025-07-24 04:56:32,Net 45,2025-07-24 04:56:32,25-07-2025
+92674,Media Networks,Video,Arjun Patel,07/31/2025,Net 60,2025-07-31 11:16:25,
+55093,Click Networks,Display,Jennifer Smith,04-05-2025,weekly,05/04/2025,1746572955
+38707,Media Collective,Display,Mary Walker,2025-07-03,weekly,,"Jul 04, 2025"
+56849,Performance Labs,Search,Linda Costa,2025-04-04 15:42:25,Net 15,2025-04-04 15:42:25,1743982945
+79951,Media Collective,Social,Nadia Walker,"May 31, 2025",Net 15,2025-05-31 20:21:37,06/02/2025
+32768,Digital Labs, Native ,Priya Walker,1760456297,Net 15,2025-10-14 15:38:17,1760564297
+87537,Media Solutions,Video,Arjun Nguyen,07-08-2025,Net 45,2025-08-07 21:11:35,1754665895
+83807,Performance Collective, Email ,Omar Martinez,2025-03-10,Net 60,2025-03-10 04:18:27,2025-03-11 09:18:27
+14975,Traffic Partners,SOCIAL,,"Jan 08, 2025",weekly,2025-01-08,1736358272
+72650,Media Group, Native ,Michael Walker,2025-02-20 16:15:02,Net 15,1740068102,"Feb 23, 2025"
+33260,Click Partners, Search ,Robert Nguyen,"Oct 01, 2025",Net 45,01-10-2025,
+24538,Click Partners,display,Meera Costa,1748963584,weekly,2025-06-03 15:13:04,1748963584
+23242,Click Group,Display,Robert Garcia,1760263256,Net 60,2025-10-12 10:00:56,2025-10-14
+93789,Growth Solutions,Display,,2025-08-07 06:00:29,weekly,1754546429,2025-08-09
+56769,Performance Solutions,Native,Olivia Garcia,"May 27, 2025",Net 15,"May 27, 2025",2025-05-28 18:47:43
+48602,Digital Labs,Video,James Haddad,2025-08-11,Net 60,2025-08-11,2025-08-13 19:12:26
+84381,Media Labs,Native,Priya Walker,08/26/2025,Net 45,1756204147,2025-08-27
+93839,Traffic Networks,Social,Priya Rossi,2025-01-31 05:12:37,Net 45,2025-01-31,2025-02-01 13:12:37
+55457,Click Labs,Video,Ava Williams,03-10-2025,Net 15,03-10-2025,1759737745
+68540,,Social,Linda Haddad,1737964415,Net 15,01/27/2025,"Jan 28, 2025"
+43640,Traffic Solutions,Search,Mary Gonzalez,06/20/2025,Net 60,2025-06-20 04:30:27,2025-06-20
+31802,Lead Networks,EMAIL,Arjun Chen,"May 26, 2025",Net 30,1748284174,2025-05-28
+72847,, Email ,John Walker,2025-01-13 23:25:47,Net 15,1736810747,01/14/2025
+12631,Click Group,Search,John Hernandez,2025-03-08,Net 60,08-03-2025,2025-03-08 06:29:43
+31090,Traffic Co,SEARCH,,"Aug 27, 2025",Net 60,2025-08-27,08/27/2025
+14062,Lead Solutions,Social,Ken Wilson,2025-03-03 00:18:48,Net 30,2025-03-03,"Mar 05, 2025"
+23272,Click Labs,social,Chen Haddad,2025-08-04 04:42:07,weekly,2025-08-04,2025-08-05 13:42:07
+44768,Reach Group,Social,Patricia Johnson,2025-06-02 14:06:50,weekly,2025-06-02 14:06:50,2025-06-04 01:06:50
+82045,Growth Labs,Search,Arjun Smith,2025-06-16,Net 30,1750037675,"Jun 17, 2025"
+48607,Growth Labs,Search,James Miller,08-03-2025,Net 15,08-03-2025,03/11/2025
+20739,Growth Collective,search,,2025-06-04,Net 60,2025-06-04 08:39:51,2025-06-05 02:39:51
+74106,,Video,Omar Gonzalez,"Mar 13, 2025",Net 15,1741893184,2025-03-14 08:13:04
+59996,Click Labs,Email,Mary Rodriguez,2025-06-20,Net 60,06/20/2025,22-06-2025
+44524,Performance Collective,Display,Nadia Johnson,2025-02-28 16:38:23,Net 30,2025-02-28 16:38:23,03/01/2025
+21233,Click Collective,Native,Chen Muller,18-08-2025,Net 45,08/18/2025,2025-08-19
+82561,Media Collective,Email,Olivia Kumar,2025-06-12,weekly,,
+72236,Performance Networks, Display ,John Gonzalez,"Oct 05, 2025",Net 30,"Oct 05, 2025",10/06/2025
+75811,Digital Partners,Email,Jennifer Garcia,2025-03-24,Net 45,2025-03-24 06:57:33,1742824653
+26539,,search,Ravi Wilson,20-03-2025,Net 45,03/20/2025,03/22/2025
+87994,Reach Group,video,Noah Williams,"Feb 03, 2025",Net 60,2025-02-03,2025-02-04
+82923,Lead Co,Display,Liam Rodriguez,"Jul 21, 2025",Net 60,2025-07-21,"Jul 22, 2025"
+11620,Lead Partners,EMAIL,,2025-08-09 01:02:17,weekly,2025-08-09 01:02:17,2025-08-11 13:02:17
+86372,Traffic Partners,native,Emma Brown,2025-04-22,weekly,1745289283,24-04-2025
+55071,,email,Yuki Patel,,weekly,08/11/2025,08/13/2025
+72003,Media Labs,Display,Wei Jones,"Aug 29, 2025",weekly,2025-08-29,2025-08-29 23:27:22
+99235,Lead Partners,Email,Ava Hernandez,09/26/2025,Net 45,09/26/2025,1759046596
+16460,Growth Group,display,,1745858436,Net 15,2025-04-28,2025-05-01 02:40:36
+46745,Growth Collective,Video,Ravi Brown,30-03-2025,Net 45,2025-03-30,2025-03-31 08:43:01
+49384,Growth Collective,Display,David Rossi,06/11/2025,weekly,06/11/2025,2025-06-12
+94614,Traffic Labs,Email,Michael Young,2025-06-08 03:06:10,Net 60,1749351970,2025-06-08 23:06:10
+77698,Click Collective,Search,Aisha Walker,2025-03-03 17:43:50,Net 30,1741023830,2025-03-05
+50779,Lead Labs,Native,Ava Nguyen,2025-01-12 05:48:59,Net 45,12-01-2025,01/12/2025
+35265,Performance Collective, Search ,Linda Johnson,"Jun 27, 2025",Net 30,2025-06-27 06:24:35,2025-06-28 02:24:35
+57235,Performance Group,Display,Olivia Anderson,07/16/2025,Net 60,2025-07-16,2025-07-17 06:07:08
+93284,Traffic Solutions,Search,Linda Lopez,07/09/2025,weekly,09-07-2025,2025-07-12 16:49:21
+68471,Digital Collective,Email,Nadia Chen,2025-05-16,Net 15,1747425594,"May 17, 2025"
+31432,Reach Solutions,Video,John Martinez,"Jan 11, 2025",Net 60,2025-01-11 15:51:25,"Jan 12, 2025"
+16507,Digital Collective,Native,Emma Miller,2025-03-27 23:08:29,Net 45,03/27/2025,03/29/2025
+98826,,video,Chen Kumar,08-01-2025,Net 30,2025-01-08,01/09/2025
+72140,,social,Ken Walker,"Jan 04, 2025",Net 45,"Jan 04, 2025",2025-01-05
+43081,Reach Solutions,Video,Yuki Rodriguez,,Net 60,2025-06-14 14:09:56,2025-06-15
+55706,Growth Group,Social,,,weekly,20-09-2025,
+91737,,Search,James Kumar,09/15/2025,Net 15,"Sep 15, 2025",2025-09-13 15:36:00
+83591,Reach Group,Video,Patricia Patel,25-01-2025,Net 15,2025-01-25 19:00:16,2025-01-28 05:00:16
+46239,Click Collective,Display,David Silva,2025-10-04 03:52:27,Net 15,04-10-2025,2025-10-05
+34688,Digital Co,Social,Ava Johnson,2025-08-22,Net 60,2025-08-22 00:42:56,2025-08-23 02:42:56
+96577,Click Solutions, Social ,Lucas Smith,"Sep 12, 2025",Net 60,2025-09-12 12:46:33,09/12/2025
+48745,Reach Networks, Email ,Wei Rossi,2025-01-14 17:11:49,weekly,,2025-01-15
+84978,Performance Group,video,Meera Davis,2025-09-24,weekly,24-09-2025,"Sep 25, 2025"
+93665,Growth Solutions,Display,,2025-03-08,weekly,2025-03-08,2025-03-08
+33741,Reach Partners, Email ,,"Apr 11, 2025",weekly,"Apr 11, 2025",13-04-2025
+33995,Click Solutions,Search,,2025-03-28 17:34:01,Net 15,2025-03-28 17:34:01,03/29/2025
+65112,Click Group,Display,Nadia Martinez,2025-06-30 02:33:44,Net 30,2025-06-30 02:33:44,"Jul 02, 2025"
+71674,Media Collective,Video,Nadia Nguyen,08/30/2025,Net 30,2025-08-30 00:55:15,2025-08-31 09:55:15
+71894,Performance Co, Search ,Liam Costa,2025-05-29 05:24:53,weekly,1748496293,1748496293
+49106,Lead Partners,Social,Robert Miller,2025-05-14 01:54:53,Net 60,2025-05-14 01:54:53,2025-05-16
+84632,Growth Labs,Display,Liam Haddad,2025-03-12,Net 30,2025-03-12,2025-03-13 19:02:48
+73908,Click Solutions,SOCIAL,Priya Silva,2025-01-23 12:43:33,Net 30,2025-01-23 12:43:33,
+69251,Reach Labs,Social,Nadia Muller,1741005800,Net 60,03-03-2025,2025-03-06
+21539,Digital Co,Email,Yuki Wilson,2025-06-06,Net 60,2025-06-06,"Jun 07, 2025"
+72573,Lead Partners,Search,Omar Miller,2025-10-11 18:14:10,Net 15,2025-10-11,13-10-2025
+11845,Click Collective,Native,Michael Smith,09/20/2025,Net 30,1758397499,2025-09-22 14:44:59
+92141,Performance Labs,video,Ava Lopez,2025-05-02,Net 45,2025-05-02 04:54:38,02-05-2025
+23462,Lead Co,Native,Elizabeth Garcia,2025-01-26,Net 30,"Jan 26, 2025",2025-01-29 06:31:08
+49085,Reach Networks,Video,Aisha Kim,2025-07-23 13:07:49,Net 15,,07/25/2025
+66841,Digital Group,Email,Arjun Muller,2025-03-15 04:15:28,Net 45,,1742040928
+62873,Media Labs,SOCIAL,Lucas Jones,03/24/2025,Net 30,03/24/2025,2025-03-26 06:26:08
+87292,Digital Partners, Display ,Meera Silva,2025-01-15 12:15:08,Net 60,01/15/2025,
+93928,Reach Collective,Native,Ken Johnson,2025-08-19 15:46:24,Net 30,"Aug 19, 2025","Aug 20, 2025"
+96765,Traffic Solutions,SEARCH,Mary Haddad,02/14/2025,Net 60,02/14/2025,1739614461
+68237,Lead Partners, Native ,David Patel,2025-09-30,Net 45,1759240389,
+36934,Media Group,Email,Ravi Brown,2025-09-15,weekly,2025-09-15 06:47:19,16-09-2025
+45386,Digital Networks,Search,Aisha Rossi,2025-08-28 21:21:44,Net 30,2025-08-28 21:21:44,2025-08-31
+47054,Traffic Collective,SEARCH,Diego Miller,2025-08-25,Net 45,08/25/2025,08/25/2025
+44471,Performance Group,video,Chen Martinez,03/04/2025,Net 30,,1741078045
+81845,Growth Labs,Video,Diego Hernandez,2025-04-02 01:44:51,Net 30,02-04-2025,"Apr 05, 2025"
+11671,,NATIVE,Ravi Patel,1740694058,Net 30,1740694058,1740816458
+77070,Traffic Solutions,video,Patricia Rodriguez,"Sep 08, 2025",Net 45,2025-09-08 05:39:15,2025-09-08 13:39:15
+69867,Reach Group,email,Mary Brown,03/09/2025,Net 30,"Mar 09, 2025",2025-03-10
+48085,Click Collective,Video,Priya Wilson,14-10-2025,Net 30,2025-10-14,2025-10-16
+22451,Media Partners,Social,Ravi Silva,1741411042,Net 15,03/08/2025,"Mar 08, 2025"
+56861,Growth Co,Display,Ava Rossi,06-02-2025,Net 15,2025-02-06,2025-02-08 00:22:08
+54921,Digital Partners,email,Wei Anderson,2025-04-16 13:40:04,Net 60,1744810804,
+72684,Lead Solutions,Social,Patricia Jones,2025-09-28 08:46:24,Net 30,2025-09-28 08:46:24,2025-09-28
+30892,Traffic Networks,Native,Diego Walker,"Aug 09, 2025",Net 60,2025-08-09,1754949373
+33758,,Display,Ken Smith,2025-09-23,Net 45,23-09-2025,09/25/2025
+73318,Growth Partners,Email,Sofia Johnson,2025-01-25,Net 15,2025-01-25,2025-01-28
+95848,Click Partners,Video,Liam Costa,,weekly,07/23/2025,25-07-2025
+84057,Performance Solutions, Display ,Aisha Kumar,2025-09-25 06:52:37,weekly,2025-09-25 06:52:37,26-09-2025
+22483,Lead Solutions,Video,Linda Patel,2025-05-15,Net 60,"May 15, 2025",2025-05-17
+29484,, Video ,Jennifer Kumar,1751436323,Net 60,"Jul 02, 2025",07/03/2025
+31679,,Email,Priya Davis,"May 09, 2025",Net 15,2025-05-09,2025-05-11 01:09:48
+16599,Performance Co,Video,Wei Gonzalez,1743574891,Net 30,04/02/2025,2025-04-04
+70174,Growth Collective,Native,Sofia Williams,2025-07-13 13:56:52,Net 60,07/13/2025,07/16/2025
+51426,Traffic Networks,Video,Yuki Smith,02/09/2025,Net 60,02/09/2025,2025-02-12
+64046,Media Co,Native,James Young,2025-02-05 07:12:28,weekly,02/05/2025,2025-02-03 16:12:28
+91142,Reach Co,NATIVE,Michael Silva,2025-09-18,Net 60,1758220541,09/20/2025
+54676,Click Collective,Search,Olivia Davis,"Jun 26, 2025",Net 15,26-06-2025,2025-06-28 02:52:26
+83420,Growth Solutions,VIDEO,Arjun Haddad,06/25/2025,Net 30,2025-06-25,"Jun 27, 2025"
+22771,Performance Partners,display,Arjun Young,2025-09-04,Net 15,04-09-2025,09/04/2025
+81786,Click Solutions,Search,,2025-07-11,Net 45,2025-07-11 05:42:25,11-07-2025
+63636,Traffic Group,NATIVE,Michael Miller,,Net 60,,2025-02-17
+38257,Growth Collective,Social,Meera Hernandez,11-02-2025,Net 60,02/11/2025,12-02-2025
+16094,Traffic Collective,EMAIL,Sofia Costa,2025-08-17 20:49:29,weekly,2025-08-17,2025-08-18 11:49:29
+27647,,Native,Lucas Johnson,1754252795,Net 60,08/03/2025,08/04/2025
+86692,,Social,Meera Nguyen,2025-03-09 10:32:16,Net 45,1741516336,2025-03-11
+23573,Lead Solutions,NATIVE,Ken Hernandez,2025-07-15 18:38:48,Net 60,15-07-2025,07/17/2025
+64875,Performance Group,Email,Priya Martinez,2025-06-25 20:49:40,Net 45,25-06-2025,06/28/2025
+28111,Lead Co,Video,Ava Rossi,07/18/2025,Net 15,18-07-2025,2025-07-20 12:55:55
+81802,Click Solutions,Video,Omar Silva,1742982406,Net 45,"Mar 26, 2025",2025-03-27
+37487,Reach Solutions,DISPLAY,Ravi Jones,"Oct 03, 2025",Net 45,,2025-10-05 09:22:29
+76046,Click Solutions,Search,Emma Lopez,08/07/2025,Net 60,2025-08-07 08:49:53,1754642993
+86389,Lead Solutions,Video,Ava Young,07/27/2025,Net 15,"Jul 27, 2025",2025-07-29 08:20:05
+65363,,Search,James Gonzalez,26-02-2025,Net 30,1740565955,03/01/2025
+97851,Media Labs,DISPLAY,Emma Walker,1741089695,Net 15,2025-03-04,"Mar 06, 2025"
+99573,Reach Labs, Search ,Meera Walker,2025-04-25,Net 45,04/25/2025,"Apr 26, 2025"
+80932,Media Group,email,Patricia Kim,2025-09-20 08:21:31,weekly,,09/22/2025
+39400,Lead Labs,Native,Noah Walker,2025-09-28,Net 15,2025-09-28,"Sep 28, 2025"
+97096,Media Networks,Email,Chen Walker,2025-09-24,Net 15,2025-09-24,2025-09-25 07:02:57
+82368,Media Partners,video,David Miller,2025-08-30 00:03:15,Net 60,2025-08-30 00:03:15,
+39563,Click Collective,Native,Omar Rossi,2025-08-23,Net 45,2025-08-23 07:58:27,2025-08-24 09:58:27
+35362,Reach Networks,Social,Ravi Williams,2025-03-14,Net 45,14-03-2025,2025-03-14 16:44:52
+77350,Traffic Networks,SEARCH,Chen Rodriguez,2025-08-05 03:52:30,Net 15,2025-08-05 03:52:30,2025-08-06 19:52:30
+27048,Digital Co,Display,James Hernandez,07/01/2025,Net 45,1751337083,"Jul 02, 2025"
+15235,,Native,Mary Muller,2025-08-31,weekly,2025-08-31 20:50:23,2025-09-01
+96755,, Native ,Omar Lopez,,Net 15,29-01-2025,1738239473
+78864,Performance Labs,Native,John Walker,2025-07-16,Net 45,2025-07-16,2025-07-16
+64516,Lead Partners,Display,Linda Miller,15-09-2025,Net 15,2025-09-15,2025-09-17
+53393,,Social,Emma Kim,2025-07-26,Net 60,07/26/2025,
+83575,Media Partners,Video,Arjun Anderson,2025-04-04,weekly,04/04/2025,"Apr 04, 2025"
+91412,Performance Partners,Video,Ava Hernandez,2025-05-29 02:39:01,Net 30,05/29/2025,05/31/2025
+60577,Reach Co,Video,Elizabeth Smith,07/20/2025,Net 15,2025-07-20,2025-07-21 12:33:26
+77411,Growth Networks, Search ,Elizabeth Silva,,Net 15,03/16/2025,"Mar 19, 2025"
+77357,Traffic Partners,SOCIAL,,2025-07-27,Net 30,07/27/2025,
+92173,Traffic Labs,Video,Yuki Muller,"Mar 24, 2025",Net 60,2025-03-24 18:56:10,03/26/2025
